@@ -1,0 +1,50 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body {
+	font-family: Roboto;
+	font-size: 20px;
+	color: #e6e6e6;
+	background-color: black;
+}
+.flex-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: space-around;
+}
+.main {
+	height: 100%;
+	width: 100%;
+}
+.two-col {
+	flex: 1 0 50%;
+}
+.two-col~.two-col {
+	border-left: 1px solid white;
+}
+.nav {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+}
+.nav-item {
+	flex: 1 0 100%;
+	min-width: 50%;
+	padding: 0 1em;
+	text-align: left;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	&:hover {
+		border-left: 2em solid #222;
+	}
+	h1 {
+		margin: .5em 0;
+	}
+}
