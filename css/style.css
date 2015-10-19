@@ -20,28 +20,31 @@ body {
   align-content: space-around; }
 
 .main {
+  position: absolute;
   height: 100%;
   width: 100%; }
 
 .two-col {
-  flex: 1 0 50%; }
+  flex: 1 0 50%;
+  padding-top: 5em;
+  padding-bottom: 15em; }
 
 .two-col ~ .two-col {
   border-left: 1px solid white; }
 
 .nav {
+  margin-left: 20%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around; }
 
 .nav-item {
-  flex: 1 0 100%;
   min-width: 50%;
   padding: 0 1em;
   text-align: left;
   cursor: pointer;
   transition: all .2s ease-in-out; }
   .nav-item:hover {
-    border-left: 2em solid #222; }
+    border-left: 1.5em solid #222; }
   .nav-item h1 {
-    margin: .5em 0; }
+    margin: .25em 0; }
