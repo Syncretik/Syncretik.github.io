@@ -28,7 +28,7 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 
 	gulp.watch('src/scss/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
-	gulp.watch(['*.html', '*.css', '*.js'], {cwd: 'app'}, reload);
+	gulp.watch(['*.html', '*.css', '*.js'], {cwd: './'}, reload);
 });
 
 gulp.task('ghostMode');
