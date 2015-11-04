@@ -10,26 +10,22 @@ body {
   font-family: Roboto;
   font-size: 20px;
   color: #e6e6e6;
-  background-color: black; }
+  background-color: black;
+  opacity: 0.8; }
 
 .flex-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: stretch;
   align-content: space-around; }
-
-.main {
-  position: absolute;
-  height: 100%;
-  width: 100%; }
 
 /* BACKGROUND */
 .diag-line {
   position: absolute;
   height: 40%;
   width: 70%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #e6e6e6;
   transform: translateX(33%) translateY(65%) rotate(30deg); }
 
 .diag-box-sg {
@@ -40,7 +36,7 @@ body {
   transform: translateX(30%) translateY(60%) rotate(30deg);
   opacity: .1;
   z-index: -1000;
-  animation: spin-sg 20s linear 0s infinite alternate; }
+  animation: spin-sg 30s linear 0s infinite alternate; }
 
 .diag-box-g {
   position: absolute;
@@ -51,22 +47,22 @@ body {
   opacity: .1;
   z-index: -999;
   transition: all 10s linear;
-  animation: spin-g 20s linear 0s infinite alternate; }
+  animation: spin-g 30s linear 0s infinite alternate; }
 
 @keyframes spin-sg {
   to {
     transform: rotate3d(160deg); } }
 @keyframes spin-g {
   to {
-    transform: translateY(20%) rotate(-20deg); } }
+    transform: translateY(20%) rotate(10deg); } }
 /* CONTENT */
 .two-col {
   flex: 1 0 50%; }
 
 .two-col ~ .two-col {
-  border-left: 1px solid white; }
+  border-left: 1px solid #e6e6e6; }
 
-.nav {
+nav {
   margin: 20% 20% 30% 20%;
   display: flex;
   flex-flow: column nowrap;
@@ -83,4 +79,17 @@ body {
     border-left: 1.5em solid #222;
     opacity: 1; }
   .nav-item h1 {
+    font-size: 40px;
     margin: .25em 0; }
+
+#right-panel {
+  justify-content: center;
+  align-items: center; }
+
+footer {
+  background-color: #111;
+  font-size: 12px;
+  flex: 1 0 100%;
+  padding: 1em;
+  z-index: 1000;
+  border: 1px solid grey; }
