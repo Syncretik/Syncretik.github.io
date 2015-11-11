@@ -55,7 +55,7 @@ body {
 		translateX(30%)
 		translateY(60%)
 		rotate(30deg);
-	opacity: .1;
+	opacity: .15;
 	z-index: -1000;
 	animation: spin-sg 30s linear 0s infinite alternate;
 }
@@ -68,7 +68,7 @@ body {
 		translateX(0%)
 		translateY(30%)
 		rotate(-32deg);
-	opacity: .1;
+	opacity: .15;
 	z-index: -999;
 	transition: all 10s linear;
 	animation: spin-g 30s linear 0s infinite alternate;
