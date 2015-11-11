@@ -7,7 +7,11 @@ html {
 *:before,
 *:after {
 	box-sizing: inherit;
-	// background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.1);
+}
+html, body {
+	height: 100%;
+	margin: 0;
 }
 body {
 	font-family: Roboto;
@@ -23,10 +27,13 @@ body {
 	align-items: stretch;
 	align-content: space-around;
 }
-.main {
+#main {
 	// position: absolute;
 	// height: 100%;
 	// width: 100%;
+	display: flex;
+	flex-flow: column;
+	height: 100%;
 }
 /* BACKGROUND */
 .diag-line {
@@ -84,6 +91,10 @@ body {
 }
 
 /* CONTENT */
+.content {
+	flex: 1 1 auto;
+	height: 100%;
+}
 .two-col {
 	flex: 1 0 50%;
 }
@@ -118,10 +129,10 @@ nav {
 	align-items: center;
 }
 footer {
+	flex: 0 1 5%;
 	background-color: #111;
 	font-size: 12px;
-	flex: 1 0 100%;
 	padding: 1em;
 	z-index: 1000;
-	border: 1px solid grey;
+	border: 1px dotted grey;
 }
