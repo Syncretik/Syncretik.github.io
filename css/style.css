@@ -4,8 +4,7 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-  background-color: rgba(0, 0, 0, 0.1); }
+  box-sizing: inherit; }
 
 html, body {
   height: 100%;
