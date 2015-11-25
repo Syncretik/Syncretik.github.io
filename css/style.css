@@ -6,7 +6,8 @@ html {
 *:after {
   box-sizing: inherit; }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0; }
 
@@ -35,7 +36,8 @@ body {
   height: 40%;
   width: 70%;
   border-bottom: 1px solid #e6e6e6;
-  transform: translateX(33%) translateY(65%) rotate(30deg); }
+  transform: translateX(33%) translateY(65%) rotate(30deg);
+  z-index: -998; }
 
 .diag-box-sg {
   position: fixed;
@@ -43,7 +45,7 @@ body {
   width: 70%;
   background-color: slategrey;
   transform: translateX(30%) translateY(60%) rotate(30deg);
-  opacity: .15;
+  opacity: 0.15;
   z-index: -1000;
   animation: spin-sg 30s linear 0s infinite alternate; }
 
@@ -53,7 +55,7 @@ body {
   width: 30%;
   background-color: grey;
   transform: translateX(0%) translateY(30%) rotate(-32deg);
-  opacity: .15;
+  opacity: 0.15;
   z-index: -999;
   transition: all 10s linear;
   animation: spin-g 30s linear 0s infinite alternate; }
@@ -76,7 +78,7 @@ body {
   border-left: 1px solid #e6e6e6; }
 
 nav {
-  margin: 20% 20% 30% 20%;
+  margin: 20% 20% 30%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around; }
@@ -87,17 +89,44 @@ nav {
   padding: 0 1em;
   text-align: left;
   cursor: pointer;
-  transition: all .2s linear; }
+  transition: all 0.2s linear; }
   .nav-item:hover {
     border-left: 1.5em solid #222;
     opacity: 1; }
   .nav-item h1 {
     font-size: 40px;
-    margin: .25em 0; }
+    margin: 0.25em 0; }
 
 #right-panel {
   justify-content: center;
   align-items: center; }
+  #right-panel .info-panel {
+    height: 100%;
+    width: 100%;
+    padding: 3em; }
+
+#about-panel {
+  margin-left: 10%;
+  margin-bottom: 10%; }
+  #about-panel p {
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    position: relative; }
+    #about-panel p:before, #about-panel p:after {
+      border-radius: 6px; }
+    #about-panel p:after {
+      content: "";
+      background: url("../src/img/sideshot black and white.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1; }
 
 footer {
   flex: 0 1 5%;
