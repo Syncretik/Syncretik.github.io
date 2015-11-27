@@ -3,14 +3,13 @@ window.onload = function() {
 	(function moveLines() {
 		var diag = document.getElementById('diag-line');
 		var diagWidth = 0;
-		var diagHeight = 0;
 		var id = setInterval(function() {
-			diag.style.width = diagWidth + '%';
+			diag.style.border = diagWidth + 'px solid $prim-white';
 			diagWidth++;
 			if (diagWidth > 70) {
 				clearInterval(id);
 			}
-		}, 10);
+		}, 40);
 	})();
 
 	function toggleSection(section) {

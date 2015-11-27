@@ -27,7 +27,8 @@ body {
 body {
 	font-family: Quicksand,Roboto;
 	font-size: 20px;
-	color: $prim-white;
+	// color: $prim-white;
+    color: white;
 	background-color: black;
 	opacity: 0.8;
 }
@@ -53,7 +54,7 @@ body {
 #diag-line {
 	position: absolute;
 	height: 40%;
-	// width: 70%;
+	width: 70%;
 	border-bottom: 1px solid $prim-white;
 	transform: translateX(33%) translateY(65%) rotate(30deg);
 	z-index: -998;
@@ -140,6 +141,7 @@ nav {
 		height: 100%;
 		width: 100%;
 		padding: 3em;
+        display: none;
 	}
 }
 #about-panel {
