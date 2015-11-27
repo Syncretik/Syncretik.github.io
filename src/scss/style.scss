@@ -31,10 +31,6 @@ body {
 	background-color: black;
 	opacity: 0.8;
 }
-a{
-    color: $prim-white;
-    text-decoration: none;
-}
 
 /* Containers */
 .flex-container {
@@ -182,12 +178,20 @@ footer {
 	padding: 1.5em;
 	z-index: 1000;
 	border: 1px dotted grey;
+    a {
+        color: grey;
+        text-decoration: none;
+        transition: all .1s linear;
+        &:hover {
+            color: $prim-white;
+        }
+    }
 }
 #footer-left {
     flex: 1 0 5%;
 }
 #footer-right {
-    flex: 0 1 5%;
+    flex: 0 1 6%;
     display: flex;
     justify-content: space-between;
     i {
