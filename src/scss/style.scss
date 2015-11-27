@@ -117,7 +117,6 @@ nav {
 	justify-content: space-around;
 }
 .nav-item {
-
 	// flex: 1 0 20%;
 	opacity: 0.8;
 	min-width: 50%;
@@ -143,6 +142,9 @@ nav {
 		padding: 3em;
         display: none;
 	}
+}
+#construction {
+    display: flex;
 }
 #about-panel {
 	p {

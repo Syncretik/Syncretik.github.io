@@ -114,6 +114,9 @@ nav {
     padding: 3em;
     display: none; }
 
+#construction {
+  display: flex; }
+
 #about-panel {
   margin-left: 10%;
   margin-bottom: 10%; }
