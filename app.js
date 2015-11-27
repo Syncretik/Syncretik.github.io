@@ -1,14 +1,33 @@
 window.onload = function() {
+	/* move lines across screen on load */
+	(function moveLines() {
+		var diag = document.getElementById('diag-line');
+		var diagWidth = 0;
+		var diagHeight = 0;
+		var id = setInterval(function() {
+			diag.style.width = diagWidth + '%';
+			diagWidth++;
+			if (diagWidth > 70) {
+				clearInterval(id);
+			}
+		}, 10);
+	})();
 
 	function toggleSection(section) {
-		console.log(section);
+		console.log('in toggleSection');
 		var display = section.style.display;
 		console.log(display);
-		var otherDisplays = allSections.style.display;
+		var otherDisplays = [3];
+		for (var i = 0; i < 3; i++) {
+			otherDisplays[i] = allSections[i].style.display;
+		}
 		if (display == 'none') {
 			display = 'flex';
 			for (var i in otherDisplays) {
-				if (otherDisplays[i] == section) {
+				if (i === 3) {
+					break;
+				}
+				if (allSections[i] == section) {
 					continue;
 				}
 				otherDisplays[i] = 'none';
@@ -25,7 +44,22 @@ window.onload = function() {
 		works = document.getElementById('works-panel'),
 		allSections = document.getElementsByClassName('info-panel');
 
-	home.addEventListener('click', toggleSection(home));
-	about.addEventListener('click', toggleSection(about));
-	works.addEventListener('click', toggleSection(works));
+	(function hideSections() {
+		for (var i in allSections) {
+			if (i == 'length') break;
+			console.log(allSections[i]);
+			allSections[i].style.display = 'none';
+		}
+	})();
+
+	// Event listeners are not calling functions, why?
+	home.addEventListener('click', function() {
+		toggleSection(home);
+	});
+	about.addEventListener('click', function() {
+		toggleSection(about);
+	});
+	works.addEventListener('click', function() {
+		toggleSection(works);
+	});
 }

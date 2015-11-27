@@ -50,10 +50,10 @@ body {
 	height: 100%;
 }
 /* BACKGROUND */
-.diag-line {
+#diag-line {
 	position: absolute;
 	height: 40%;
-	width: 70%;
+	// width: 70%;
 	border-bottom: 1px solid $prim-white;
 	transform: translateX(33%) translateY(65%) rotate(30deg);
 	z-index: -998;
