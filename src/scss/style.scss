@@ -1,4 +1,14 @@
+@font-face {
+  font-family: "Petita";
+  src: url("src/PetitaMedium.tff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Variables */
 $prim-white: #e6e6e6;
+
+/* General Formatting */
 html {
 	box-sizing: border-box;
 }
@@ -15,12 +25,18 @@ body {
 	margin: 0;
 }
 body {
-	font-family: Roboto;
+	font-family: Quicksand,Roboto;
 	font-size: 20px;
 	color: $prim-white;
 	background-color: black;
 	opacity: 0.8;
 }
+a{
+    color: $prim-white;
+    text-decoration: none;
+}
+
+/* Containers */
 .flex-container {
 	display: flex;
 	flex-flow: row wrap;
@@ -137,14 +153,14 @@ nav {
 		padding: 1em;
 		position: relative;
 		&:before, &:after {
-			border-radius: 6px;
+			border-radius: 800px 0 800px 0;
 		}
 		&:after {
 			content: "";
 			background: url("../src/img/sideshot black and white.jpg");
-			background-size: cover;
+			// background-size: cover;
 			background-repeat: no-repeat;
-			opacity: 0.2;
+			opacity: 0.3;
 			top: 0;
 			left: 0;
 			bottom: 0;
@@ -158,9 +174,23 @@ nav {
 }
 footer {
 	flex: 0 1 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 	background-color: #111;
 	font-size: 12px;
-	padding: 1em;
+	padding: 1.5em;
 	z-index: 1000;
 	border: 1px dotted grey;
+}
+#footer-left {
+    flex: 1 0 5%;
+}
+#footer-right {
+    flex: 0 1 5%;
+    display: flex;
+    justify-content: space-between;
+    i {
+        flex: 1 0 auto;
+    }
 }
