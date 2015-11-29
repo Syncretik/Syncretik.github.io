@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
 	/* move lines across screen on load */
 	(function moveLines() {
 		var diag = document.getElementById('diag-line');
@@ -12,7 +12,29 @@ window.onload = function() {
 		}, 40);
 	})();
 
-	function toggleSection(section) {
+	var home = document.getElementById('home'),
+		about = document.getElementById('about'),
+		works = document.getElementById('works');
+
+	var homePanel = document.getElementById('home-panel'),
+		aboutPanel = document.getElementById('about-panel'),
+		worksPanel = document.getElementById('works-panel'),
+		allSections = document.getElementsByClassName('info-panel');
+
+	// hide all sections except home
+	(function hideSections() {
+		for (var i = 0; i < 2; i++) {
+			if (i == 0) {
+				console.log('unhiding home');
+				allSections[i].style.display = 'flex';
+				continue;
+			}
+			allSections[i].style.display = 'none';
+			console.log(allSections[i]);
+		}
+	})();
+
+function toggleSection(section) {
 		console.log('in toggleSection');
 		var display = section.style.display;
 		console.log(display);
@@ -33,25 +55,8 @@ window.onload = function() {
 			}
 		}
 	}
+// Event listeners are not calling functions, why?
 
-	var home = document.getElementById('home'),
-		about = document.getElementById('about'),
-		works = document.getElementById('works');
-
-	var home = document.getElementById('home-panel'),
-		about = document.getElementById('about-panel'),
-		works = document.getElementById('works-panel'),
-		allSections = document.getElementsByClassName('info-panel');
-
-	(function hideSections() {
-		for (var i in allSections) {
-			if (i == 'length') break;
-			console.log(allSections[i]);
-			allSections[i].style.display = 'none';
-		}
-	})();
-
-	// Event listeners are not calling functions, why?
 	home.addEventListener('click', function() {
 		toggleSection(home);
 	});
@@ -61,4 +66,4 @@ window.onload = function() {
 	works.addEventListener('click', function() {
 		toggleSection(works);
 	});
-}
+});
