@@ -25,38 +25,36 @@ document.addEventListener('DOMContentLoaded', function() {
 	(function hideSections() {
 		for (var i = 0; i < 2; i++) {
 			if (i == 0) {
-				console.log('unhiding home');
 				allSections[i].style.display = 'flex';
 				continue;
 			}
 			allSections[i].style.display = 'none';
-			console.log(allSections[i]);
 		}
 	})();
 
-function toggleSection(section) {
+	function toggleSection(section) {
 		console.log('in toggleSection');
-		var display = section.style.display;
-		console.log(display);
-		var otherDisplays = [3];
-		for (var i = 0; i < 3; i++) {
-			otherDisplays[i] = allSections[i].style.display;
-		}
-		if (display == 'none') {
-			display = 'flex';
-			for (var i in otherDisplays) {
-				if (i === 3) {
-					break;
-				}
-				if (allSections[i] == section) {
-					continue;
-				}
-				otherDisplays[i] = 'none';
-			}
-		}
-	}
-// Event listeners are not calling functions, why?
+		console.log(section);
+		console.log(allSections);
 
+		var splitId;
+
+		for (var i = 0; i < allSections.length; i++) {
+			// trim id of selected section so that we can pattern match with nav item id
+			console.log(i);
+			splitId = allSections[i].id.split("-");
+			console.log(splitId);
+			if (splitId[0] == section.id) {
+				console.log('ayy lmao');
+				allSections[i].style.display = 'flex';
+				continue;
+			}
+			allSections[i].style.display = 'none';
+		}
+		console.log()
+	}
+
+	// add event listeners to swap sections on nav item click
 	home.addEventListener('click', function() {
 		toggleSection(home);
 	});
