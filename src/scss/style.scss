@@ -149,11 +149,11 @@ nav {
 #about-panel {
 	p {
 		height: 100%;
-		width: 96%;
+		width: 90%;
 		padding: 1em;
 		position: relative;
 		&:before, &:after {
-			border-radius: 800px 0 0px 0;
+			border-radius: 400px 0 0px 0;
 		}
 		&:after {
 			content: "";

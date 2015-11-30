@@ -122,11 +122,11 @@ nav {
   margin-bottom: 10%; }
   #about-panel p {
     height: 100%;
-    width: 96%;
+    width: 90%;
     padding: 1em;
     position: relative; }
     #about-panel p:before, #about-panel p:after {
-      border-radius: 800px 0 0px 0; }
+      border-radius: 400px 0 0px 0; }
     #about-panel p:after {
       content: "";
       background: url("../src/img/sideshot black and white.jpg");
