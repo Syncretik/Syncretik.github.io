@@ -127,7 +127,7 @@ nav {
     position: relative;
     padding: 3em;
     color: transparent;
-    transition: color .2s 0.8s linear; }
+    transition: color .2s 0.5s linear; }
     #about-panel p:before, #about-panel p:after {
       transition: all 0.8s ease-in-out; }
     #about-panel p:after {
