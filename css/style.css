@@ -127,12 +127,12 @@ nav {
     position: relative;
     padding: 3em;
     color: transparent;
-    transition: color .2s 0.5s linear; }
+    transition: color .25s 0.5s linear; }
     #about-panel p:before, #about-panel p:after {
       transition: all 0.8s ease-in-out; }
     #about-panel p:after {
       content: "";
-      background-color: #777;
+      background: url("../src/img/sideshot black and white.jpg");
       background-size: cover;
       border: 200px inset #aaa;
       border-radius: 450px;
