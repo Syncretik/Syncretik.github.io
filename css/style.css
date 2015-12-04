@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Petita";
-  src: url("src/PetitaMedium.tff") format("truetype");
+  src: url(src/PetitaMedium.tff) format("truetype");
   font-weight: normal;
   font-style: normal; }
 /* Variables */
@@ -98,9 +98,10 @@ nav {
   text-align: left;
   cursor: pointer;
   transition: all 0.2s linear; }
+  .nav-item:before, .nav-item:after {
+    transition: all 0.2s linear; }
   .nav-item:hover {
-    border-left: 1.5em solid #222;
-    opacity: 1; }
+    border-left: 1.5em solid #222; }
   .nav-item h1 {
     font-size: 40px;
     margin: 0.25em 0; }
@@ -109,7 +110,6 @@ nav {
   justify-content: center;
   align-items: center; }
   #right-panel .info-panel {
-    height: 100%;
     width: 100%;
     padding: 3em;
     display: none; }
@@ -118,26 +118,38 @@ nav {
   display: flex; }
 
 #about-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 10%;
-  margin-bottom: 10%; }
+  margin-bottom: 15%; }
   #about-panel p {
-    height: 100%;
-    width: 90%;
-    padding: 1em;
-    position: relative; }
+    position: relative;
+    padding: 3em;
+    color: transparent;
+    transition: color .2s 0.8s linear; }
     #about-panel p:before, #about-panel p:after {
-      border-radius: 400px 0 0px 0; }
+      transition: all 0.8s ease-in-out; }
     #about-panel p:after {
       content: "";
-      background: url("../src/img/sideshot black and white.jpg");
+      background-color: #777;
+      background-size: cover;
+      border: 200px inset #aaa;
+      border-radius: 450px;
       background-repeat: no-repeat;
-      opacity: 0.3;
+      opacity: 0.35;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
       position: absolute;
-      z-index: -1; }
+      z-index: 1; }
+    #about-panel p:hover {
+      color: #e6e6e6; }
+      #about-panel p:hover:before, #about-panel p:hover:after {
+        border: 2em inset #aaa;
+        border-radius: 0;
+        opacity: 0.25; }
 
 footer {
   flex: 0 1 5%;
@@ -152,7 +164,7 @@ footer {
   footer a {
     color: grey;
     text-decoration: none;
-    transition: all .1s linear; }
+    transition: all 0.1s linear; }
     footer a:hover {
       color: #e6e6e6; }
 
