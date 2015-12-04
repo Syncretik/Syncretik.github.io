@@ -149,7 +149,7 @@ nav {
       #about-panel p:hover:before, #about-panel p:hover:after {
         border: 2em inset #aaa;
         border-radius: 0;
-        opacity: 0.2; }
+        opacity: 0.33; }
 
 footer {
   flex: 0 1 5%;

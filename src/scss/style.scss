@@ -118,7 +118,6 @@ nav {
 	justify-content: space-around;
 }
 .nav-item {
-
 	// flex: 1 0 20%;
 	opacity: 0.8;
 	min-width: 50%;
@@ -132,7 +131,6 @@ nav {
 	}
 	&:hover {
 		border-left: 1.5em solid #222;
-
 		// opacity: 1;
 	}
 	h1 {
@@ -194,7 +192,7 @@ nav {
 			&:after {
 				border: 2em inset #aaa;
 				border-radius: 0;
-				opacity: 0.2;
+				opacity: 0.33;
 			}
 			color: $prim-white;
 
