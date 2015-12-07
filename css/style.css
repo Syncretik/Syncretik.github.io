@@ -47,7 +47,7 @@ body {
   transform: translateX(33%) translateY(65%) rotate(30deg);
   z-index: -998; }
 
-.diag-box-sg {
+.diag-box-rectangle {
   position: fixed;
   height: 60%;
   width: 70%;
@@ -57,7 +57,7 @@ body {
   z-index: -1000;
   animation: spin-sg 30s linear 0s infinite alternate; }
 
-.diag-box-g {
+.diag-box-square {
   position: absolute;
   height: 60%;
   width: 30%;
@@ -66,7 +66,7 @@ body {
   opacity: 0.15;
   z-index: -999;
   transition: all 10s linear;
-  animation: spin-g 30s linear 0s infinite alternate; }
+  animation: spin-g 20s linear 0s infinite alternate; }
 
 @keyframes spin-sg {
   to {
@@ -127,6 +127,7 @@ nav {
     position: relative;
     padding: 3em;
     color: transparent;
+    font-weight: bolder;
     transition: color .25s 0.5s linear; }
     #about-panel p:before, #about-panel p:after {
       transition: all 0.8s ease-in-out; }
@@ -149,7 +150,7 @@ nav {
       #about-panel p:hover:before, #about-panel p:hover:after {
         border: 2em inset #aaa;
         border-radius: 0;
-        opacity: 0.3; }
+        opacity: 0.35; }
 
 footer {
   flex: 0 1 5%;

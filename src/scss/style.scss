@@ -60,7 +60,7 @@ body {
 	transform: translateX(33%) translateY(65%) rotate(30deg);
 	z-index: -998;
 }
-.diag-box-sg {
+.diag-box-rectangle {
 	position: fixed;
 	height: 60%;
 	width: 70%;
@@ -70,7 +70,7 @@ body {
 	z-index: -1000;
 	animation: spin-sg 30s linear 0s infinite alternate;
 }
-.diag-box-g {
+.diag-box-square {
 	position: absolute;
 	height: 60%;
 	width: 30%;
@@ -79,7 +79,7 @@ body {
 	opacity: 0.15;
 	z-index: -999;
 	transition: all 10s linear;
-	animation: spin-g 30s linear 0s infinite alternate;
+	animation: spin-g 20s linear 0s infinite alternate;
 }
 @keyframes spin-sg {
 	from {
@@ -162,7 +162,7 @@ nav {
 		position: relative;
 		padding: 3em;
 		color: transparent;
-		// font-weight: bold;
+		font-weight: bolder;
 		transition: color .25s 0.5s linear;
 		&:before,
 		&:after {
@@ -192,7 +192,7 @@ nav {
 			&:after {
 				border: 2em inset #aaa;
 				border-radius: 0;
-				opacity: 0.3;
+				opacity: 0.35;
 			}
 			color: $prim-white;
 
