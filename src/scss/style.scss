@@ -118,6 +118,7 @@ nav {
 	justify-content: space-around;
 }
 .nav-item {
+
 	// flex: 1 0 20%;
 	opacity: 0.8;
 	min-width: 50%;
@@ -131,6 +132,7 @@ nav {
 	}
 	&:hover {
 		border-left: 1.5em solid #222;
+
 		// opacity: 1;
 	}
 	h1 {
@@ -152,52 +154,68 @@ nav {
 #construction {
 	display: flex;
 }
+#about-btn {
+	display: none;
+}
 #about-panel {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-left: 10%;
 	margin-bottom: 15%;
-	p {
-		position: relative;
-		padding: 3em;
-		color: transparent;
-		font-weight: bolder;
-		transition: color .25s 0.5s linear;
+}
+#about-description {
+	position: relative;
+	padding: 3em;
+	color: transparent;
+	font-weight: bolder;
+	transition: color 0.25s 0.5s linear;
+	&:before,
+	&:after {
+		transition: all 0.8s ease-in-out;
+	}
+	&:after {
+		content: "";
+		background: url("../src/img/sideshot black and white.jpg");
+		// background-color: #777;
+		background-size: cover;
+
+		// border-radius: 120px 0 120px 0;
+		border: 200px inset #aaa;
+		border-radius: 450px;
+		background-repeat: no-repeat;
+		opacity: 0.15;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: 1;
+	}
+	&:hover {
 		&:before,
 		&:after {
-			transition: all 0.8s ease-in-out;
+			border: 2em inset #aaa;
+			border-radius: 0;
+			opacity: 0.35;
 		}
+		color: $prim-white;
+	}
+}
+@media all and (max-width: 415) {
+	input {
+		display: none;
+	}
+	input:checked + #about-panel p {
+		&:before,
 		&:after {
-			content: "";
-
-			background: url("../src/img/sideshot black and white.jpg");
-			// background-color: #777;
-			background-size: cover;
-
-			// border-radius: 120px 0 120px 0;
-			border: 200px inset #aaa;
-			border-radius: 450px;
-			background-repeat: no-repeat;
-			opacity: 0.15;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			position: absolute;
-			z-index: 1;
+			border: 2em inset #aaa;
+			border-radius: 0;
+			opacity: 0.35;
 		}
-		&:hover {
-			&:before,
-			&:after {
-				border: 2em inset #aaa;
-				border-radius: 0;
-				opacity: 0.35;
-			}
-			color: $prim-white;
+		color: $prim-white;
 
-			// border: 16px inset #aaa;
-		}
+		// border: 16px inset #aaa;
 	}
 }
 footer {
