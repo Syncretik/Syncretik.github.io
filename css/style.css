@@ -173,7 +173,7 @@ footer {
   align-items: center;
   background-color: #111;
   font-size: 12px;
-  padding: 1.5em;
+  padding: .7em;
   z-index: 1000;
   border: 1px dotted grey; }
   footer a {
@@ -184,11 +184,13 @@ footer {
       color: #e6e6e6; }
 
 #footer-left {
-  flex: 1 0 5%; }
+  flex: 1 0 5%;
+  padding-left: .3em; }
 
 #footer-right {
   flex: 0 1 6%;
   display: flex;
+  padding-right: .6em;
   justify-content: space-between; }
   #footer-right i {
     flex: 1 0 auto; }
