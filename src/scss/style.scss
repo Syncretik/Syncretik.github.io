@@ -122,7 +122,7 @@ nav {
 	// flex: 1 0 20%;
 	opacity: 0.8;
 	min-width: 50%;
-	padding: 0 1em;
+	padding: 0 10%;
 	text-align: left;
 	cursor: pointer;
 	transition: all 0.2s linear;
@@ -179,25 +179,24 @@ nav {
 		background: url("../src/img/sideshot black and white.jpg");
 		// background-color: #777;
 		background-size: cover;
-
 		// border-radius: 120px 0 120px 0;
 		border: 200px inset #aaa;
 		border-radius: 450px;
 		background-repeat: no-repeat;
-		opacity: 0.15;
+		opacity: 0.35;
 		top: 0;
 		left: 0;
 		bottom: 0;
 		right: 0;
 		position: absolute;
-		z-index: 1;
+		z-index: 0;
 	}
 	&:hover {
 		&:before,
 		&:after {
 			border: 2em inset #aaa;
 			border-radius: 0;
-			opacity: 0.35;
+			opacity: 0.3;
 		}
 		color: $prim-white;
 	}
@@ -218,20 +217,20 @@ nav {
 		// border: 16px inset #aaa;
 	}
 }
+/* FOOTER */
 footer {
 	flex: 0 1 5%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #111;
+	background-color: #0c0c0c;
 	font-size: 12px;
 	padding: .7em;
 	z-index: 1000;
-	border: 1px dotted grey;
+	// border: 1px dotted grey;
 	a {
 		color: grey;
 		text-decoration: none;
-		transition: all 0.1s linear;
 		&:hover {
 			color: $prim-white;
 		}
@@ -240,6 +239,8 @@ footer {
 #footer-left {
 	flex: 1 0 5%;
 	padding-left: .3em;
+	font-size: 14px;
+	// cursor: default;
 }
 #footer-right {
 	flex: 0 1 6%;

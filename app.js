@@ -1,3 +1,4 @@
+// why do I do this to myself
 document.addEventListener('DOMContentLoaded', function() {
 	/* move lines across screen on load */
 	(function moveLines() {
@@ -41,17 +42,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		for (var i = 0; i < allSections.length; i++) {
 			// trim id of selected section so that we can pattern match with nav item id
-			console.log(i);
 			splitId = allSections[i].id.split("-");
-			console.log(splitId);
 			if (splitId[0] == section.id) {
-				console.log('ayy lmao');
 				allSections[i].style.display = 'flex';
 				continue;
 			}
 			allSections[i].style.display = 'none';
 		}
 		console.log()
+	}
+
+	function FadeIn() {
+
 	}
 
 	// add event listeners to swap sections on nav item click

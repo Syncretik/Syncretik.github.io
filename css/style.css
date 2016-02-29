@@ -94,7 +94,7 @@ nav {
 .nav-item {
   opacity: 0.8;
   min-width: 50%;
-  padding: 0 1em;
+  padding: 0 10%;
   text-align: left;
   cursor: pointer;
   transition: all 0.2s linear; }
@@ -142,19 +142,19 @@ nav {
     border: 200px inset #aaa;
     border-radius: 450px;
     background-repeat: no-repeat;
-    opacity: 0.15;
+    opacity: 0.35;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: 1; }
+    z-index: 0; }
   #about-description:hover {
     color: #e6e6e6; }
     #about-description:hover:before, #about-description:hover:after {
       border: 2em inset #aaa;
       border-radius: 0;
-      opacity: 0.35; }
+      opacity: 0.3; }
 
 @media all and (max-width: 415) {
   input {
@@ -166,26 +166,26 @@ nav {
       border: 2em inset #aaa;
       border-radius: 0;
       opacity: 0.35; } }
+/* FOOTER */
 footer {
   flex: 0 1 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
+  background-color: #0c0c0c;
   font-size: 12px;
   padding: .7em;
-  z-index: 1000;
-  border: 1px dotted grey; }
+  z-index: 1000; }
   footer a {
     color: grey;
-    text-decoration: none;
-    transition: all 0.1s linear; }
+    text-decoration: none; }
     footer a:hover {
       color: #e6e6e6; }
 
 #footer-left {
   flex: 1 0 5%;
-  padding-left: .3em; }
+  padding-left: .3em;
+  font-size: 14px; }
 
 #footer-right {
   flex: 0 1 6%;
