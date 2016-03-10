@@ -1,16 +1,25 @@
 // why do I do this to myself
 document.addEventListener('DOMContentLoaded', function() {
 	/* move lines across screen on load */
-	(function moveLines() {
-		var diag = document.getElementById('diag-line');
-		var diagWidth = 0;
-		var id = setInterval(function() {
-			diag.style.border = diagWidth + 'px solid $prim-white';
-			diagWidth++;
-			if (diagWidth > 70) {
-				clearInterval(id);
-			}
-		}, 40);
+	var diag = document.getElementById('diag-line');
+	// (function moveLines() {
+	// 	var diagWidth = 0;
+	// 	var id = setInterval(function() {
+	// 		diag.style.border = diagWidth + 'px solid $prim-white';
+	// 		diagWidth++;
+	// 		if (diagWidth > 70) {
+	// 			clearInterval(id);
+	// 		}
+	// 	}, 40);
+	// })();
+
+
+	var vertLine = document.getElementById('vert-line');
+	.then(function moveDiagLine() {
+		TweenMax.from(diag, 2, {
+			width: "440px",
+			ease: Power4.easeInOut
+		});
 	})();
 
 	var home = document.getElementById('home'),
@@ -34,9 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	})();
 
 	function toggleSection(section) {
-		console.log('in toggleSection');
-		console.log(section);
-		console.log(allSections);
 
 		var splitId;
 
@@ -52,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		console.log()
 	}
 
-	function FadeIn() {
+	function fadeIn() {
 
 	}
 
