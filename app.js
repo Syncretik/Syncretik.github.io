@@ -12,23 +12,31 @@ document.addEventListener('DOMContentLoaded', function() {
 	// 	}, 40);
 	// })();
 
-	var diag = document.getElementById('diag-line');
+	var home = document.getElementById('home-btn'),
+		about = document.getElementById('about-btn'),
+		works = document.getElementById('works-btn');
+
+	var homePanel = document.getElementById('home-panel'),
+		aboutPanel = document.getElementById('about-panel'),
+		worksPanel = document.getElementById('works-panel'),
+		allSections = document.getElementsByClassName('info-panel');
+
+	var diagLine = document.getElementById('diag-line');
 	var vertLine = document.getElementById('vert-line');
+
+	// Initial animations on page load
 	(function moveVertLine() {
 		TweenMax.to(vertLine, 5, {
 			height: "750px",
 			ease: Power2.easeInOut
 		});
 	})();
-
-	var home = document.getElementById('home'),
-		about = document.getElementById('about'),
-		works = document.getElementById('works');
-
-	var homePanel = document.getElementById('home-panel'),
-		aboutPanel = document.getElementById('about-panel'),
-		worksPanel = document.getElementById('works-panel'),
-		allSections = document.getElementsByClassName('info-panel');
+	function moveDiagLine() {
+		TweenMax.to(diagLine, 5, {
+			width: "1010px",
+			ease: Power2.easeInOut
+		});
+	};
 
 	// hide all sections except home
 	(function hideSections() {
@@ -39,6 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 			allSections[i].style.display = 'none';
 		}
+	})();
+	(function showHome() {
+		TweenMax.to(homePanel, 10, {
+			opacity: 1,
+			marginBottom: '5em',
+			ease: Power4.easeInOut
+		});
 	})();
 
 	function toggleSection(section) {
@@ -60,11 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
 				ease: Power3.easeInOut
 			});
 		}
-		console.log()
-	}
-
-	function fadeIn() {
-
 	}
 
 	// add event listeners to swap sections on nav item click
