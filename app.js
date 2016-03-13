@@ -1,7 +1,6 @@
 // why do I do this to myself
 document.addEventListener('DOMContentLoaded', function() {
 	/* move lines across screen on load */
-	var diag = document.getElementById('diag-line');
 	// (function moveLines() {
 	// 	var diagWidth = 0;
 	// 	var id = setInterval(function() {
@@ -13,12 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	// 	}, 40);
 	// })();
 
-
+	var diag = document.getElementById('diag-line');
 	var vertLine = document.getElementById('vert-line');
-	.then(function moveDiagLine() {
-		TweenMax.from(diag, 2, {
-			width: "440px",
-			ease: Power4.easeInOut
+	(function moveVertLine() {
+		TweenMax.to(vertLine, 5, {
+			height: "750px",
+			ease: Power2.easeInOut
 		});
 	})();
 
@@ -50,10 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
 			// trim id of selected section so that we can pattern match with nav item id
 			splitId = allSections[i].id.split("-");
 			if (splitId[0] == section.id) {
-				allSections[i].style.display = 'flex';
+				TweenMax.to(allSections[i], 1, {
+					opacity: 1,
+					ease: Power3.easeInOut
+				});
 				continue;
 			}
-			allSections[i].style.display = 'none';
+			TweenMax.to(allSections[i], 1, {
+				opacity: 0,
+				ease: Power3.easeInOut
+			});
 		}
 		console.log()
 	}
