@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	(function showHome() {
 		TweenMax.to(homePanel, 10, {
 			opacity: 1,
-			marginBottom: '5em',
+			marginBottom: '3em',
 			ease: Power4.easeInOut
 		});
 	})();
