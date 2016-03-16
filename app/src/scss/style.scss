@@ -29,35 +29,37 @@ body {
 	// color: white;
 	background-color: black;
 	opacity: 0.8;
+	cursor: default;
 }
 /* BACKGROUND */
 #diag-line {
-	position: absolute;
+	position: fixed;
 	height: 40%;
 	width: 70%;
+	// width: 0;
+	opacity: 0;
 	border-bottom: 1px solid $prim-white;
 	transform: translateX(33%) translateY(65%) rotate(30deg);
 	z-index: -998;
 }
-.diag-box-rectangle {
+#diag-box-rectangle {
 	position: fixed;
 	height: 60%;
 	width: 70%;
 	background-color: slategrey;
 	transform: translateX(30%) translateY(60%) rotate(30deg);
-	opacity: 0.15;
+	opacity: 0;
 	z-index: -1000;
 	animation: spin-sg 30s linear 0s infinite alternate;
 }
-.diag-box-square {
+#diag-box-square {
 	position: absolute;
 	height: 60%;
 	width: 30%;
 	background-color: grey;
 	transform: translateX(0%) translateY(30%) rotate(-32deg);
-	opacity: 0.15;
+	opacity: 0;
 	z-index: -999;
-	transition: all 10s linear;
 	animation: spin-g 20s linear 0s infinite alternate;
 }
 @keyframes spin-sg {
@@ -97,7 +99,7 @@ body {
 }
 #vert-line {
 	background-color: $prim-white;
-	height: 0px;
+	height: 0;
 	width: 1px;
 	z-index: -100;
 }
@@ -109,7 +111,7 @@ nav {
 }
 .nav-item {
 	// flex: 1 0 20%;
-	opacity: 0.8;
+	opacity: 0;
 	min-width: 50%;
 	padding: 0 10%;
 	text-align: left;
@@ -120,7 +122,7 @@ nav {
 		transition: all 0.2s linear;
 	}
 	&:hover {
-		border-left: 1.5em solid #2c2c2c;
+		border-left: 1.5em solid #2d2d2d;
 		// opacity: 1;
 	}
 	h1 {
@@ -136,7 +138,6 @@ nav {
 		padding: 3em;
 		display: flex;
 		opacity: 0;
-		cursor: default;
 	}
 }
 #construction {
@@ -167,7 +168,7 @@ nav {
 	}
 	&:after {
 		content: "";
-		background: url("../src/img/sideshot black and white.jpg");
+		background: url("../../src/img/sideshot black and white.jpg");
 		// background-color: #777;
 		background-size: cover;
 		// border-radius: 120px 0 120px 0;
@@ -217,7 +218,8 @@ footer {
 	font-size: 12px;
 	padding: 0.7em;
 	z-index: 1000;
-	// border: 1px dotted grey;
+	opacity: 0;
+	border: 1px solid grey;
 	a {
 		color: grey;
 		text-decoration: none;
@@ -230,7 +232,6 @@ footer {
 	flex: 1 0 5%;
 	padding-left: 0.3em;
 	font-size: 14px;
-	// cursor: default;
 }
 #footer-right {
 	flex: 0 1 8%;

@@ -24,36 +24,37 @@ body {
   font-size: 20px;
   color: #e6e6e6;
   background-color: black;
-  opacity: 0.8; }
+  opacity: 0.8;
+  cursor: default; }
 
 /* BACKGROUND */
 #diag-line {
-  position: absolute;
+  position: fixed;
   height: 40%;
   width: 70%;
+  opacity: 0;
   border-bottom: 1px solid #e6e6e6;
   transform: translateX(33%) translateY(65%) rotate(30deg);
   z-index: -998; }
 
-.diag-box-rectangle {
+#diag-box-rectangle {
   position: fixed;
   height: 60%;
   width: 70%;
   background-color: slategrey;
   transform: translateX(30%) translateY(60%) rotate(30deg);
-  opacity: 0.15;
+  opacity: 0;
   z-index: -1000;
   animation: spin-sg 30s linear 0s infinite alternate; }
 
-.diag-box-square {
+#diag-box-square {
   position: absolute;
   height: 60%;
   width: 30%;
   background-color: grey;
   transform: translateX(0%) translateY(30%) rotate(-32deg);
-  opacity: 0.15;
+  opacity: 0;
   z-index: -999;
-  transition: all 10s linear;
   animation: spin-g 20s linear 0s infinite alternate; }
 
 @keyframes spin-sg {
@@ -85,7 +86,7 @@ body {
 
 #vert-line {
   background-color: #e6e6e6;
-  height: 0px;
+  height: 0;
   width: 1px;
   z-index: -100; }
 
@@ -96,7 +97,7 @@ nav {
   justify-content: space-around; }
 
 .nav-item {
-  opacity: 0.8;
+  opacity: 0;
   min-width: 50%;
   padding: 0 10%;
   text-align: left;
@@ -105,7 +106,7 @@ nav {
   .nav-item:before, .nav-item:after {
     transition: all 0.2s linear; }
   .nav-item:hover {
-    border-left: 1.5em solid #2c2c2c; }
+    border-left: 1.5em solid #2d2d2d; }
   .nav-item h1 {
     font-size: 40px;
     margin: 0.25em 0; }
@@ -117,8 +118,7 @@ nav {
     width: 100%;
     padding: 3em;
     display: flex;
-    opacity: 0;
-    cursor: default; }
+    opacity: 0; }
 
 #construction {
   display: flex; }
@@ -146,7 +146,7 @@ nav {
     transition: all 0.8s ease-in-out; }
   #about-description:after {
     content: "";
-    background: url("../src/img/sideshot black and white.jpg");
+    background: url("../../src/img/sideshot black and white.jpg");
     background-size: cover;
     border: 200px inset #aaa;
     border-radius: 450px;
@@ -184,7 +184,9 @@ footer {
   background-color: #111;
   font-size: 12px;
   padding: 0.7em;
-  z-index: 1000; }
+  z-index: 1000;
+  opacity: 0;
+  border: 1px solid grey; }
   footer a {
     color: grey;
     text-decoration: none; }
