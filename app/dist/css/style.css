@@ -29,7 +29,7 @@ body {
 
 /* BACKGROUND */
 #diag-line {
-  position: fixed;
+  position: absolute;
   height: 40%;
   width: 70%;
   opacity: 0;
@@ -186,7 +186,7 @@ footer {
   padding: 0.7em;
   z-index: 1000;
   opacity: 0;
-  border: 1px solid grey; }
+  border: 1px dotted grey; }
   footer a {
     color: grey;
     text-decoration: none; }

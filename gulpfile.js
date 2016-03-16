@@ -17,7 +17,7 @@ gulp.task('scripts', function() {
 		.pipe(debug({title : 'unicorn'}))
 		.pipe(babel())
 		.pipe(uglify())
-		.pipe(gulp.dest('app/dist/js'));
+		.pipe(gulp.dest('app/dist/js/'));
 });
 
 gulp.task('serve', ['sass', 'scripts'], function() {
@@ -26,13 +26,12 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 			baseDir: 'app'
 		},
 		ghostMode: { scroll: false },
-		startPath: 'dist',
 		minify: true
 	});
 
 	gulp.watch('app/src/scss/*.scss', ['sass']);
 	gulp.watch('app/src/js/app.js', ['scripts']);
-	gulp.watch(['app/dist/*.html', 'app/dist/css/*.css', 'app/dist/js/*.js'], {cwd: './'}, reload);
+	gulp.watch(['app/*.html', 'app/dist/js/*.js'], {cwd: './'}, reload);
 });
 
 gulp.task('ghostMode');
