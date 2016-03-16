@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// hide all sections
 	(function hideSections() {
-		for (var i = 0; i <- 2; i++) {
+		for (var i = 0; i <= 2; i++) {
+			if (i == 0) {
+				allSections[i].style.display = 'flex';
+				continue;
+			}
 			allSections[i].style.display = 'none';
 		}
 	})();
@@ -28,26 +32,26 @@ document.addEventListener('DOMContentLoaded', function() {
 	(
 		function loadPageElements() {
 
-			// TweenMax.from(document.getElementsByTagName('body'), 3, {
-			// 	backgroundColor: 'white',
-			// 	ease: Power2.easeInOut,
-			// 	onComplete: moveVertLine
-			// });
-			//
-			// function moveVertLine() {
+			TweenMax.from(document.getElementsByTagName('body'), 3, {
+				backgroundColor: 'white',
+				ease: Power2.easeInOut,
+				onComplete: moveVertLine
+			});
+
+			function moveVertLine() {
 			TweenMax.to(vertLine, 5, {
 				height: "730px",
 				ease: Power2.easeInOut,
 				onComplete: showBoxes
 			});
-			// }
+			}
 
 			function showBoxes() {
-				TweenMax.staggerTo([diagSquare, diagRectangle], 2, {
+				TweenMax.staggerTo([diagSquare, diagRectangle], 3, {
 					opacity: '0.15',
 					ease: Power2.easeInOut,
 					onUpdate: moveDiagLine
-				}, 1);
+				}, 1.2);
 			}
 
 			function moveDiagLine() {
