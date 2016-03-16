@@ -7,15 +7,15 @@ var debug = require('gulp-debug');
 var uglify = require('gulp-uglify');
 
 gulp.task('sass', function() {
-	return sass('app/src/scss/style.scss')
-		.pipe(gulp.dest('app/dist/css/'))
+	return sass('src/scss/style.scss')
+		.pipe(gulp.dest('dist/css/'))
 		.pipe(reload({
 			stream: true
 		}));
 });
 
 gulp.task('scripts', function() {
-	return gulp.src('app/src/js/app.js')
+	return gulp.src('src/js/app.js')
 		.pipe(debug({
 			title: 'unicorn'
 		}))
@@ -23,13 +23,13 @@ gulp.task('scripts', function() {
 			presets: ['es2015']
 		}))
 		// .pipe(uglify())
-		.pipe(gulp.dest('app/dist/js/'));
+		.pipe(gulp.dest('dist/js/'));
 });
 
 gulp.task('serve', ['sass', 'scripts'], function() {
 	browserSync.init({
 		server: {
-			baseDir: 'app'
+			baseDir: '.'
 		},
 		ghostMode: {
 			scroll: false
@@ -37,9 +37,9 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 		minify: false
 	});
 
-	gulp.watch('app/src/scss/*.scss', ['sass']);
-	gulp.watch('app/src/js/app.js', ['scripts']);
-	gulp.watch(['app/*.html', 'app/dist/js/*.js'], {
+	gulp.watch('src/scss/*.scss', ['sass']);
+	gulp.watch('src/js/app.js', ['scripts']);
+	gulp.watch(['*.html', 'dist/js/*.js'], {
 		cwd: './'
 	}, reload);
 });
