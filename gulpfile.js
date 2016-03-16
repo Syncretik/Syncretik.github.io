@@ -1,22 +1,28 @@
-var gulp 		= require('gulp');
-var sass		= require('gulp-ruby-sass');
-var babel		= require('gulp-babel');
+var gulp = require('gulp');
+var sass = require('gulp-ruby-sass');
+var babel = require('gulp-babel');
 var browserSync = require('browser-sync').create();
-var reload 		= browserSync.reload;
-var debug 		= require('gulp-debug');
-var uglify		= require('gulp-uglify');
+var reload = browserSync.reload;
+var debug = require('gulp-debug');
+var uglify = require('gulp-uglify');
 
 gulp.task('sass', function() {
 	return sass('app/src/scss/style.scss')
-			.pipe(gulp.dest('app/dist/css/'))
-			.pipe(reload({ stream:true }));
+		.pipe(gulp.dest('app/dist/css/'))
+		.pipe(reload({
+			stream: true
+		}));
 });
 
 gulp.task('scripts', function() {
 	return gulp.src('app/src/js/app.js')
-		.pipe(debug({title : 'unicorn'}))
-		.pipe(babel())
-		.pipe(uglify())
+		.pipe(debug({
+			title: 'unicorn'
+		}))
+		.pipe(babel({
+			presets: ['es2015']
+		}))
+		// .pipe(uglify())
 		.pipe(gulp.dest('app/dist/js/'));
 });
 
@@ -25,13 +31,17 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 		server: {
 			baseDir: 'app'
 		},
-		ghostMode: { scroll: false },
-		minify: true
+		ghostMode: {
+			scroll: false
+		},
+		minify: false
 	});
 
 	gulp.watch('app/src/scss/*.scss', ['sass']);
 	gulp.watch('app/src/js/app.js', ['scripts']);
-	gulp.watch(['app/*.html', 'app/dist/js/*.js'], {cwd: './'}, reload);
+	gulp.watch(['app/*.html', 'app/dist/js/*.js'], {
+		cwd: './'
+	}, reload);
 });
 
 gulp.task('ghostMode');

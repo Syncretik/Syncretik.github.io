@@ -1,16 +1,5 @@
 // why do I do this to myself
 document.addEventListener('DOMContentLoaded', function() {
-	/* move lines across screen on load */
-	// (function moveLines() {
-	// 	var diagWidth = 0;
-	// 	var id = setInterval(function() {
-	// 		diag.style.border = diagWidth + 'px solid $prim-white';
-	// 		diagWidth++;
-	// 		if (diagWidth > 70) {
-	// 			clearInterval(id);
-	// 		}
-	// 	}, 40);
-	// })();
 
 	var home = document.getElementById('home-btn'),
 		about = document.getElementById('about-btn'),
@@ -29,13 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		navItems = document.getElementsByClassName('nav-item'),
 		footer = document.getElementsByTagName('footer');
 
-	// hide all sections except home
+	// hide all sections
 	(function hideSections() {
-		for (var i = 0; i < 2; i++) {
-			if (i == 0) {
-				allSections[i].style.display = 'flex';
-				continue;
-			}
+		for (var i = 0; i <- 2; i++) {
 			allSections[i].style.display = 'none';
 		}
 	})();
@@ -62,12 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
 					opacity: '0.15',
 					ease: Power2.easeInOut,
 					onUpdate: moveDiagLine
-				}, .7);
+				}, 1);
 			}
 
 			function moveDiagLine() {
 				TweenMax.to(diagLine, 2, {
-					opacity: '1',
+					opacity: 1,
 					onStart: showNav
 				});
 			}
@@ -75,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			function showNav() {
 				TweenMax.staggerTo(navItems, 1, {
 					marginLeft: '+=15px',
-					opacity: '0.8',
+					opacity: 0.8,
 					ease: Power2.easeInOut,
 					onComplete: showHome
 				}, .5);
@@ -99,21 +84,27 @@ document.addEventListener('DOMContentLoaded', function() {
 		})();
 
 	function toggleSection(section) {
-		for (var i = 0; i < allSections.length; i++) {
-			// trim id of selected section so that we can pattern match with nav item id
-			var splitId = allSections[i].id.split("-");
-			console.log(splitId);
-			if (splitId[0] == section.id) {
-				console.log('bringing back ' + splitId[0]);
+		for (var i = 0; i <= 2; i++) {
+			if (allSections[i].id == section.id) {
+				console.log('bringing back ' + allSections[i].id);
 				TweenMax.to(allSections[i], 1, {
 					opacity: 1,
-					ease: Power3.easeInOut
+					ease: Power4.easeInOut,
+					onComplete: function() {
+					console.log(allSections[i]);
+						allSections[i].style.display = 'flex';
+					}
 				});
 				continue;
 			}
 			TweenMax.to(allSections[i], 1, {
 				opacity: 0,
-				ease: Power3.easeInOut
+				display: 'none',
+				ease: Power4.easeInOut,
+				onComplete: function() {
+					console.log(allSections[i]);
+					allSections[i].style.display = 'none';
+				}
 			});
 		}
 	}
