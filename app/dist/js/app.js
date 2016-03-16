@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		function showBoxes() {
-			TweenMax.staggerTo([diagSquare, diagRectangle], 3, {
+			TweenMax.staggerTo([diagSquare, diagRectangle], 2, {
 				opacity: '0.15',
 				ease: Power2.easeInOut,
 				onUpdate: moveDiagLine
