@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Initial animations on page load
 	(function loadPageElements() {
 
-		TweenMax.from(document.getElementsByTagName('body'), 3, {
+		TweenMax.from(document.getElementsByTagName('body'), 2, {
 			backgroundColor: 'white',
 			ease: Power2.easeInOut,
 			onComplete: moveVertLine
