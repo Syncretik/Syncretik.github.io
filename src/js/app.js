@@ -39,15 +39,15 @@ document.addEventListener('DOMContentLoaded', function() {
 			});
 
 			function moveVertLine() {
-			TweenMax.to(vertLine, 5, {
-				height: "100vh",
-				ease: Power2.easeInOut,
-				onComplete: showBoxes
-			});
+				TweenMax.to(vertLine, 5, {
+					height: "100vh",
+					ease: Power2.easeInOut,
+					onComplete: showBoxes
+				});
 			}
 
 			function showBoxes() {
-				TweenMax.staggerTo([diagSquare, diagRectangle], 2, {
+				TweenMax.staggerTo([diagRectangle, diagSquare], 2, {
 					opacity: 0.15,
 					ease: Power2.easeInOut,
 					onUpdate: moveDiagLine
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					opacity: 1,
 					ease: Power4.easeInOut,
 					onComplete: function() {
-					console.log(allSections[i]);
+						console.log(allSections[i]);
 						allSections[i].style.display = 'flex';
 					}
 				});

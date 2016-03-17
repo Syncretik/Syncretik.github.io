@@ -34,8 +34,8 @@ body {
 /* BACKGROUND */
 #diag-line {
 	position: absolute;
-	height: 40%;
-	width: 70%;
+	height: 40vh;
+	width: 70vw;
 	// width: 0;
 	opacity: 0;
 	border-bottom: 1px solid $prim-white;
@@ -44,8 +44,8 @@ body {
 }
 #diag-box-rectangle {
 	position: fixed;
-	height: 60%;
-	width: 70%;
+	height: 60vh;
+	width: 70vw;
 	background-color: slategrey;
 	transform: translateX(30%) translateY(60%) rotate(30deg);
 	opacity: 0;
@@ -54,8 +54,8 @@ body {
 }
 #diag-box-square {
 	position: absolute;
-	height: 60%;
-	width: 30%;
+	height: 60vmin;
+	width: 60vmin;
 	background-color: grey;
 	transform: translateX(0%) translateY(30%) rotate(-32deg);
 	opacity: 0;
