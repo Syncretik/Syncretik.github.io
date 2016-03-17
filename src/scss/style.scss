@@ -191,7 +191,17 @@ nav {
 	}
 }
 #works-panel {
-
+	img {
+		height: 10vmax;
+		width: 10vmax;
+		// border-radius: 4vmax;
+		opacity: .2;
+		transition: .8s all ease-in-out;
+		&:hover {
+			opacity: 1;
+			transform: rotateY(360deg);
+		}
+	}
 }
 @media all and (max-width: 415) {
 	input {
