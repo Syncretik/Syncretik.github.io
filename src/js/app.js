@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			function moveVertLine() {
 			TweenMax.to(vertLine, 5, {
-				height: "730px",
+				height: "100vh",
 				ease: Power2.easeInOut,
 				onComplete: showBoxes
 			});
@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			function showBoxes() {
 				TweenMax.staggerTo([diagSquare, diagRectangle], 2, {
-					opacity: '0.15',
+					opacity: 0.15,
 					ease: Power2.easeInOut,
 					onUpdate: moveDiagLine
-				}, 1.2);
+				}, 1);
 			}
 
 			function moveDiagLine() {
