@@ -3,19 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	var home = document.getElementById('home-btn'),
 		about = document.getElementById('about-btn'),
-		works = document.getElementById('works-btn');
+		works = document.getElementById('works-btn'),
+		navItems = document.getElementsByClassName('nav-item');
 
 	var homePanel = document.getElementById('home-panel'),
 		aboutPanel = document.getElementById('about-panel'),
 		worksPanel = document.getElementById('works-panel'),
-		allSections = document.getElementsByClassName('info-panel');
+		allSections = document.getElementsByClassName('info-panel'),
+		activeSection = homePanel;
 
 	// all elements for initial page animation
 	var vertLine = document.getElementById('vert-line'),
 		diagLine = document.getElementById('diag-line'),
 		diagRectangle = document.getElementById('diag-box-rectangle'),
 		diagSquare = document.getElementById('diag-box-square'),
-		navItems = document.getElementsByClassName('nav-item'),
 		footer = document.getElementsByTagName('footer');
 
 	// hide all sections
@@ -88,28 +89,19 @@ document.addEventListener('DOMContentLoaded', function() {
 		})();
 
 	function toggleSection(section) {
-		for (var i = 0; i <= 2; i++) {
-			if (allSections[i].id == section.id) {
-				console.log('bringing back ' + allSections[i].id);
-				TweenMax.to(allSections[i], 1, {
-					opacity: 1,
-					ease: Power4.easeInOut,
-					onComplete: function() {
-						console.log(allSections[i]);
-						allSections[i].style.display = 'flex';
-					}
-				});
-				continue;
-			}
-			TweenMax.to(allSections[i], 1, {
-				opacity: 0,
-				display: 'none',
-				ease: Power4.easeInOut,
-				onComplete: function() {
-					console.log(allSections[i]);
-					allSections[i].style.display = 'none';
-				}
+		TweenMax.to(activeSection, .5, {
+			opacity: 0,
+			display: 'none',
+			onComplete: showSection
+		});
+
+		function showSection() {
+			TweenMax.to(section, .5, {
+				opacity: 1,
+				transform: 'rotate(360deg)',
+				display: 'flex'
 			});
+			activeSection = section;
 		}
 	}
 
@@ -123,4 +115,18 @@ document.addEventListener('DOMContentLoaded', function() {
 	works.addEventListener('click', function() {
 		toggleSection(worksPanel);
 	});
+
+	// for (var i = 0; i <= 2; i++) {
+	// 	navItems[i].addEventListener('mouseover', function() {
+	// 		TweenMax.to(this, 0.2, {
+	// 			borderLeft: '1.5em solid #2d2d2d'
+	// 		});
+	// 	});
+	//
+	// 	navItems[i].addEventListener('mouseout', function() {
+	// 		TweenMax.to(this, 1, {
+	// 			borderLeft: ''
+	// 		});
+	// 	});
+	// }
 });

@@ -113,7 +113,8 @@ nav {
 
 #right-panel {
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  display: flex; }
   #right-panel .info-panel {
     width: 100%;
     padding: 3em;
@@ -159,8 +160,7 @@ nav {
     color: #e6e6e6; }
     #about-description:hover:before, #about-description:hover:after {
       border: 2em inset #aaa;
-      border-radius: 0;
-      opacity: 0.3; }
+      border-radius: 0; }
 
 @media all and (max-width: 415) {
   input {
