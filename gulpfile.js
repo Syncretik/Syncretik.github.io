@@ -38,7 +38,7 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 	});
 
 	gulp.watch('src/scss/*.scss', ['sass']);
-	gulp.watch('src/js/app.js', ['scripts']);
+	gulp.watch('src/js/*.js', ['scripts']);
 	gulp.watch(['*.html', 'dist/js/*.js'], {
 		cwd: './'
 	}, reload);

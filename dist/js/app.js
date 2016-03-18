@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})();
 
 	function toggleSection(section) {
+		if (activeSection == section) return;
 		TweenMax.to(activeSection, .5, {
 			opacity: 0,
 			display: 'none',
