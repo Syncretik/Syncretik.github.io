@@ -154,22 +154,22 @@ nav {
     content: "";
     background: url("../../src/img/sideshot black and white.jpg");
     background-size: cover;
-    border: 15vw inset #aaa;
+    border: 16.5vw inset #aaa;
     border-radius: 450px;
     background-repeat: no-repeat;
-    opacity: 0.4;
-    top: 0;
+    opacity: 0.35;
+    position: absolute;
+    top: -7%;
     left: 0;
     bottom: 0;
     right: 0;
-    position: absolute;
     z-index: -10; }
   #about-description:hover {
-    color: #e6e6e6; }
+    color: silver; }
     #about-description:hover:before, #about-description:hover:after {
       border: 2em inset #aaa;
       border-radius: 0;
-      padding-top: 10em; }
+      right: -8%; }
 
 #works-panel img {
   height: 10vmax;
@@ -177,7 +177,7 @@ nav {
   opacity: 0.2;
   transition: 0.8s all ease-in-out; }
   #works-panel img:hover {
-    opacity: 1;
+    opacity: .8;
     transform: rotateY(360deg); }
 
 @media all and (max-width: 415) {
