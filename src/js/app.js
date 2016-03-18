@@ -97,12 +97,22 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 
 		function showSection() {
-			TweenMax.to(section, .5, {
+			TweenMax.to(section, 1.2, {
 				opacity: 1,
 				transform: 'rotate(360deg)',
-				display: 'flex'
+				display: 'flex',
+				// onStart: rotateCircle
 			});
 			activeSection = section;
+		}
+
+		function rotateCircle() {
+			if (section.id == 'about-panel') {
+				TweenMax.from(activeSection, 1, {
+					transform: 'rotate(-360deg)',
+					ease: Power2.easeInOut
+				});
+			}
 		}
 	}
 
