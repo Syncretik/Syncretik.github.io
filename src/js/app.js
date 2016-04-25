@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					opacity: 0.15,
 					ease: Power2.easeInOut,
 					onUpdate: moveDiagLine
-				}, 1);
+				}, .5);
 			}
 
 			function moveDiagLine() {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 
 			function showFooter() {
-				TweenMax.to(footer, 2, {
+				TweenMax.to(footer, 3, {
 					opacity: 1,
 					ease: Power4.easeInOut
 				});
@@ -101,16 +101,16 @@ document.addEventListener('DOMContentLoaded', function() {
 				opacity: 1,
 				transform: 'rotate(360deg)',
 				display: 'flex',
-				// onStart: rotateCircle
+				onStart: rotateCircle
 			});
 			activeSection = section;
 		}
 
 		function rotateCircle() {
 			if (section.id == 'about-panel') {
-				TweenMax.from(activeSection, 1, {
-					transform: 'rotate(-360deg)',
-					ease: Power2.easeInOut
+				TweenMax.from(activeSection, 1.5, {
+					transform: 'scale(.5)',
+					ease: Power4.easeOut
 				});
 			}
 		}
