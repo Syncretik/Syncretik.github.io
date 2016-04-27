@@ -115,8 +115,6 @@ body {
     text-align: left;
     cursor: pointer;
     transition: all 0.2s linear; }
-    .nav-item:before, .nav-item:after {
-      transition: all 0.2s linear; }
     .nav-item h1 {
       margin: 0.25em 0; }
     .nav-item:hover {
@@ -181,7 +179,7 @@ body {
 
   @keyframes spinPulse {
     0% {
-      transform: rotate(60deg);
+      transform: rotate(-160deg);
       opacity: 0;
       box-shadow: 0 0 1px #bdd73c; }
     100% {
