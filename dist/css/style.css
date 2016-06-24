@@ -10,23 +10,27 @@ html {
   box-sizing: border-box; }
 
 *,
-*:before,
-*:after {
+*:after,
+*:before {
   box-sizing: inherit; }
 
-html,
-body {
+body,
+html {
   height: 100vh;
   margin: 0;
   font-size: 20px; }
 
 body {
-  font-family: Quicksand,Roboto;
+  font-family: Quicksand,Roboto, Helvetica Condensed Neue, sans-serif;
   color: #e6e6e6;
   background-color: black;
   opacity: 0.8;
   cursor: default;
   font-size: 20px; }
+
+a {
+  color: #e6e6e6;
+  text-decoration: none; }
 
 @media all and (min-width: 416px) {
   h1 {
@@ -34,6 +38,9 @@ body {
 
   h2 {
     font-size: 4.0vmin; }
+
+  h3 {
+    font-size: 3.5vmin; }
 
   p {
     font-size: 1.5vmax; }
@@ -150,7 +157,7 @@ body {
     color: transparent;
     font-weight: bold;
     transition: color 0.25s 0.5s linear; }
-    #about-description:before, #about-description:after {
+    #about-description:after, #about-description:before {
       transition: all 1.0s ease-in-out; }
     #about-description:after {
       content: "";
@@ -171,7 +178,7 @@ body {
       /* easeOutQuint */ }
     #about-description:hover {
       color: #e6e6e6; }
-      #about-description:hover:before, #about-description:hover:after {
+      #about-description:hover:after, #about-description:hover:before {
         border: 2em inset #aaa;
         border-radius: 0;
         opacity: 0.4;
@@ -179,24 +186,26 @@ body {
 
   @keyframes spinPulse {
     0% {
-      transform: rotate(-160deg);
+      transform: rotate(-280deg);
       opacity: 0;
       box-shadow: 0 0 1px #bdd73c; }
     100% {
       transform: rotate(-360deg);
       opacity: 0.2; } }
-  #works-panel {
+  #works-panel .work {
+    text-align: center;
+    flex: 1 0 auto;
+    height: 10vmax;
+    width: 10vmax;
+    display: flex;
+    justify-content: center;
     align-items: flex-start; }
-    #works-panel img {
-      height: 10vmax;
-      width: 10vmax;
-      opacity: 0.2;
+    #works-panel .work h3 {
+      opacity: 0.5;
       transition: 0.2s all ease-in-out; }
-      #works-panel img:hover {
-        opacity: 0.5;
+      #works-panel .work h3:hover {
+        opacity: 1;
         transform: scale(1.05); }
-    #works-panel #syncretik {
-      margin-bottom: 25vh; }
 
   /* FOOTER */
   footer {
@@ -243,7 +252,7 @@ body {
 
   input:checked + #about-panel p {
     color: #e6e6e6; }
-    input:checked + #about-panel p:before, input:checked + #about-panel p:after {
+    input:checked + #about-panel p:after, input:checked + #about-panel p:before {
       border: 2em inset #aaa;
       border-radius: 0;
       opacity: 0.35; } }

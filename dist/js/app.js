@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			allSections[i].style.display = 'none';
 		}
 	})();
-	// Initial animations on page load
+	// Initial animation on page load
 	(function loadPageElements() {
 
 		TweenMax.from(document.getElementsByTagName('body'), 2, {
@@ -41,10 +41,17 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 
 		function moveVertLine() {
-			TweenMax.to(vertLine, 5, {
+			TweenMax.to(vertLine, 4.85, {
 				height: "100vh",
 				ease: Power2.easeInOut,
-				onComplete: showBoxes
+				onComplete: moveDiagLine
+			});
+		}
+
+		function moveDiagLine() {
+			TweenMax.to(diagLine, 2, {
+				opacity: 1,
+				onStart: showBoxes
 			});
 		}
 
@@ -52,28 +59,21 @@ document.addEventListener('DOMContentLoaded', function () {
 			TweenMax.staggerTo([diagRectangle, diagSquare], 2, {
 				opacity: 0.15,
 				ease: Power2.easeInOut,
-				onUpdate: moveDiagLine
+				onUpdate: showNav
 			}, .5);
-		}
-
-		function moveDiagLine() {
-			TweenMax.to(diagLine, 2, {
-				opacity: 1,
-				onStart: showNav
-			});
 		}
 
 		function showNav() {
 			TweenMax.staggerTo(navItems, 1, {
-				marginLeft: '+=15px',
 				opacity: 0.8,
+				marginLeft: '+=15px',
 				ease: Power2.easeInOut,
 				onComplete: showHome
 			}, .5);
 		}
 
 		function showHome() {
-			TweenMax.to(homePanel, 3, {
+			TweenMax.to(homePanel, 2, {
 				opacity: 1,
 				marginBottom: '5em',
 				ease: Power2.easeInOut,
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		function showFooter() {
-			TweenMax.to(footer, 3, {
+			TweenMax.to(footer, 2, {
 				opacity: 1,
 				ease: Power4.easeInOut
 			});

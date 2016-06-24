@@ -12,19 +12,19 @@ html {
 	box-sizing: border-box;
 }
 *,
-*:before,
-*:after {
+*:after,
+*:before {
 	box-sizing: inherit;
 	// background-color: rgba(0,0,0,0.1);
 }
-html,
-body {
+body,
+html {
 	height: 100vh;
 	margin: 0;
 	font-size: 20px;
 }
 body {
-	font-family: Quicksand,Roboto;
+	font-family: Quicksand,Roboto, Helvetica Condensed Neue, sans-serif;
 	color: $prim-white;
 	// color: white;
 	background-color: black;
@@ -32,12 +32,19 @@ body {
 	cursor: default;
 	font-size: 20px;
 }
+a {
+	color: $prim-white;
+	text-decoration: none;
+}
 @media all and (min-width: 416px) {
 	h1 {
-		font-size: 	5.0vmin;
+		font-size: 5.0vmin;
 	}
 	h2 {
 		font-size: 4.0vmin;
+	}
+	h3 {
+		font-size: 3.5vmin;
 	}
 	p {
 		font-size: 1.5vmax;
@@ -131,8 +138,8 @@ body {
 		text-align: left;
 		cursor: pointer;
 		transition: all 0.2s linear;
-		&:before,
-		&:after {
+		&:after,
+		&:before {
 			// transition: all 0.2s linear;
 		}
 		h1 {
@@ -174,8 +181,8 @@ body {
 		color: transparent;
 		font-weight: bold;
 		transition: color 0.25s 0.5s linear;
-		&:before,
-		&:after {
+		&:after,
+		&:before {
 			transition: all 1.0s ease-in-out;
 		}
 		&:after {
@@ -198,8 +205,8 @@ body {
 			/* easeOutQuint */
 		}
 		&:hover {
-			&:before,
-			&:after {
+			&:after,
+			&:before {
 				border: 2em inset #aaa;
 				border-radius: 0;
 				// padding-left: 26vw;
@@ -212,7 +219,7 @@ body {
 	}
 	@keyframes spinPulse {
 		0% {
-			transform: rotate(-160deg);
+			transform: rotate(-280deg);
 			opacity: 0;
 			box-shadow: 0 0 1px #bdd73c;
 		}
@@ -226,20 +233,23 @@ body {
 		}
 	}
 	#works-panel {
-		align-items: flex-start;
-		img {
+		.work {
+			text-align: center;
+			flex: 1 0 auto;
 			height: 10vmax;
 			width: 10vmax;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
 			// border-radius: 4vmax;
-			opacity: 0.2;
-			transition: 0.2s all ease-in-out;
-			&:hover {
+			h3 {
 				opacity: 0.5;
-				transform: scale(1.05);
+				transition: 0.2s all ease-in-out;
+				&:hover {
+					opacity: 1;
+					transform: scale(1.05);
+				}
 			}
-		}
-		#syncretik {
-			margin-bottom: 25vh;
 		}
 	}
 	/* FOOTER */
@@ -292,8 +302,8 @@ body {
 		display: none;
 	}
 	input:checked + #about-panel p {
-		&:before,
-		&:after {
+		&:after,
+		&:before {
 			border: 2em inset #aaa;
 			border-radius: 0;
 			opacity: 0.35;
