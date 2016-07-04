@@ -44,7 +44,7 @@ a {
 		font-size: 4.0vmin;
 	}
 	h3 {
-		font-size: 3.5vmin;
+		font-size: 3.7vmin;
 	}
 	p {
 		font-size: 1.5vmax;
@@ -233,23 +233,28 @@ a {
 		}
 	}
 	#works-panel {
-		.work {
+		flex-flow: row wrap;
+		.works-panel__item {
 			text-align: center;
-			flex: 1 0 auto;
+			flex: 1 0 50%;
 			height: 10vmax;
 			width: 10vmax;
 			display: flex;
 			justify-content: center;
 			align-items: flex-start;
 			// border-radius: 4vmax;
-			h3 {
+			.works-panel__item__link {
 				opacity: 0.5;
 				transition: 0.2s all ease-in-out;
 				&:hover {
 					opacity: 1;
-					transform: scale(1.05);
+					transform: scale(1.01);
+					// margin-left: 1em;
 				}
 			}
+		}
+		.works-panel__item ~ .works-panel__item {
+			border-right: 1px solid grey;
 		}
 	}
 	/* FOOTER */
@@ -266,7 +271,6 @@ a {
 		border-top: 1px dotted grey;
 		a {
 			color: grey;
-			text-decoration: none;
 			// transition: 0.1s all linear;
 			&:hover {
 				color: $prim-white;
