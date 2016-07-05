@@ -246,11 +246,12 @@ a {
 			// border-radius: 4vmax;
 			.works-panel__item__link {
 				opacity: 0.5;
+				padding: .9em;
 				transition: 0.3s all ease-in-out;
 				&:hover {
 					opacity: 1;
-					transform: scale(1.05);
 					padding: 1em;
+					transform: scale(1.05);
 					border: 1px solid silver;
 					// margin-left: 1em;
 				}

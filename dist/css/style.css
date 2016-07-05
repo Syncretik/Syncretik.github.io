@@ -205,11 +205,12 @@ a {
       align-items: center; }
       #works-panel .works-panel__item .works-panel__item__link {
         opacity: 0.5;
+        padding: .9em;
         transition: 0.3s all ease-in-out; }
         #works-panel .works-panel__item .works-panel__item__link:hover {
           opacity: 1;
-          transform: scale(1.05);
           padding: 1em;
+          transform: scale(1.05);
           border: 1px solid silver; }
 
   /* FOOTER */
