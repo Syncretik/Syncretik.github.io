@@ -193,7 +193,8 @@ a {
       transform: rotate(-360deg);
       opacity: 0.2; } }
   #works-panel {
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    margin-bottom: -3%; }
     #works-panel .works-panel__item {
       text-align: center;
       flex: 1 0 50%;
@@ -201,15 +202,15 @@ a {
       width: 10vmax;
       display: flex;
       justify-content: center;
-      align-items: flex-start; }
+      align-items: center; }
       #works-panel .works-panel__item .works-panel__item__link {
         opacity: 0.5;
-        transition: 0.2s all ease-in-out; }
+        transition: 0.3s all ease-in-out; }
         #works-panel .works-panel__item .works-panel__item__link:hover {
           opacity: 1;
-          transform: scale(1.01); }
-    #works-panel .works-panel__item ~ .works-panel__item {
-      border-right: 1px solid grey; }
+          transform: scale(1.05);
+          padding: 1em;
+          border: 1px solid silver; }
 
   /* FOOTER */
   footer {
