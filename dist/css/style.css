@@ -167,7 +167,7 @@ a {
       border: 15.5vw inset #aaa;
       border-radius: 450px;
       background-repeat: no-repeat;
-      opacity: 0.2;
+      opacity: 0.3;
       position: absolute;
       top: -8%;
       left: 0;
@@ -181,7 +181,7 @@ a {
       #about-description:hover:after, #about-description:hover:before {
         border: 2em inset #aaa;
         border-radius: 0;
-        opacity: 0.4;
+        opacity: 0.6;
         right: -5%; }
 
   @keyframes spinPulse {
@@ -190,8 +190,7 @@ a {
       opacity: 0;
       box-shadow: 0 0 1px #bdd73c; }
     100% {
-      transform: rotate(-360deg);
-      opacity: 0.2; } }
+      transform: rotate(-360deg); } }
   #works-panel {
     flex-flow: row wrap;
     margin-bottom: -3%; }
@@ -206,7 +205,7 @@ a {
       #works-panel .works-panel__item .works-panel__item__link {
         opacity: 0.5;
         padding: .9em;
-        transition: 0.2s all ease-in-out; }
+        transition: 0.25s all ease-in-out; }
         #works-panel .works-panel__item .works-panel__item__link:hover {
           opacity: 1;
           padding: 1em;
