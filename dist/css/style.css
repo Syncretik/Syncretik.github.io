@@ -181,7 +181,7 @@ a {
       #about-description:hover:after, #about-description:hover:before {
         border: 2em inset #aaa;
         border-radius: 0;
-        opacity: 0.6;
+        opacity: 0.5;
         right: -5%; }
 
   @keyframes spinPulse {
