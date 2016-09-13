@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 
 		function showSection() {
-			TweenMax.to(section, 1.2, {
+			TweenMax.to(section, 1.0, {
 				opacity: 1,
 				transform: 'rotate(360deg)',
 				display: 'flex',
