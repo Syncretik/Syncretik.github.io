@@ -167,7 +167,7 @@ a {
       border: 15.5vw inset #aaa;
       border-radius: 450px;
       background-repeat: no-repeat;
-      opacity: 0.25;
+      opacity: 0.3;
       position: absolute;
       top: -8%;
       left: 0;
@@ -181,7 +181,7 @@ a {
       #about-description:hover:after, #about-description:hover:before {
         border: 2em inset #aaa;
         border-radius: 0;
-        opacity: 0.5;
+        opacity: 0.4;
         right: -5%; }
 
   @keyframes spinPulse {
@@ -225,7 +225,8 @@ a {
     opacity: 0;
     border-top: 1px dotted grey; }
     footer a {
-      color: grey; }
+      color: grey;
+      transition: 0.1s all linear; }
       footer a:hover {
         color: #e6e6e6; }
 
