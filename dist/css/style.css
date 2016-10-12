@@ -233,8 +233,7 @@ a {
   #works-panel {
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    margin: 300% 0; }
+    align-items: center; }
     #works-panel .works-panel__row {
       flex: 1 0 100%;
       display: flex;
