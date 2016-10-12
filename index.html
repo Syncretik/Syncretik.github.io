@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Syncretik</title>
+<head>
+    <meta charset="utf-8">
+    <title>Syncretik</title>
     <link href='https://fonts.googleapis.com/css?family=Quicksand:100|Roboto:100|Ubuntu:100' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-        <!--Source Files-->
-        <link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico">
-        <link rel="stylesheet" href="dist/css/style.css" title="no title" charset="utf-8">
-        <script src="dist/js/app.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
-    </head>
+    <!--Source Files-->
+    <link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico">
+    <link rel="stylesheet" href="dist/css/style.css" title="no title" charset="utf-8">
+    <script src="dist/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+</head>
 
-    <body>
-        <!--Background-->
-        <div id="diag-box-rectangle"></div>
-        <div id="diag-box-square"></div>
-        <div id="diag-line"></div>
-        <div class="flex-container" id="main">
+<body>
+    <!--Background-->
+    <div id="diag-box-rectangle"></div>
+    <div id="diag-box-square"></div>
+    <div id="diag-line"></div>
+    <div class="flex-container" id="main">
 
-            <!--Content-->
-            <div class="flex-container" id="content">
-                <section class="two-col flex-container" id="left-panel">
-                    <nav>
-                        <div class="nav-item" id="home-btn">
-                            <h1>Home</h1>
-                        </div>
-                        <div class="nav-item" id="about-btn">
-                            <h1>Abøut</h1>
-                        </div>
-                        <div class="nav-item" id="works-btn">
-                            <h1>Works</h1>
-                        </div>
-                    </nav>
-                </section>
-                <div id="vert-line"></div>
-                <section class="two-col flex-container" id="right-panel">
-                    <div class="info-panel" id="home-panel">
-                        <h3>Site under Construction. Be back soon.</h3>
+        <!--Content-->
+        <div class="flex-container" id="content">
+            <section class="two-col flex-container" id="left-panel">
+                <nav>
+                    <div class="nav-item" id="home-btn">
+                        <h1>Home</h1>
                     </div>
-                    <input type="checkbox" id="about-circle">
-                    <label class="info-panel" id="about-panel" for="about-circle">
+                    <div class="nav-item" id="about-btn">
+                        <h1>Abøut</h1>
+                    </div>
+                    <div class="nav-item" id="works-btn">
+                        <h1>Works</h1>
+                    </div>
+                </nav>
+            </section>
+            <div id="vert-line"></div>
+            <section class="two-col flex-container" id="right-panel">
+                <div class="info-panel" id="home-panel">
+                    <p>Along the knife's edge is the road of paradoxes, the only road worthy of a fearless mind.</p>
+                </div>
+                <input type="checkbox" id="about-circle">
+                <label class="info-panel" id="about-panel" for="about-circle">
                         <p id="about-description">
                             Patrick Wu.
                             <br>
@@ -56,19 +56,30 @@
                             Rutgers University graduate.
                             <br>
                             <br>
-                            Ever in the pursuit of knowledge.
+
                             <br>
                         </p>
                     </label>
-                    <div class="info-panel" id="works-panel">
+                <div class="info-panel" id="works-panel">
+                    <div class="works-panel__row">
                         <div class="works-panel__item">
                             <a href="https://soundcloud.com/syncretik">
                                 <h3 class="works-panel__item__link">Syncretik</h3>
                             </a>
                         </div>
-                        <div class="works-panel__item works-panel__space">
-
+                        <div class="works-panel__item works-panel__space"></div>
+                        <div class="works-panel__item works-panel__space"></div>
+                    </div>
+                    <div>
+                        <div class="works-panel__item works-panel__space"></div>
+                        <div class="works-panel__item">
+                            <a href="http://rudeeptreble.com">
+                                <h3 class="works-panel__item__link">Deep Treble</h3>
+                            </a>
                         </div>
+                        <div class="works-panel__item works-panel__space"></div>
+                    </div>
+                    <div class="works-panel__row">
                         <div class="works-panel__item works-panel__space">
 
                         </div>
@@ -78,25 +89,27 @@
                             </a>
                         </div>
                     </div>
-                </section>
-            </div>
-            <footer>
-                <span id="footer-left">
+
+                </div>
+            </section>
+        </div>
+        <footer>
+            <span id="footer-left">
                     Copyright © 2015 Patrick Wu
                 </span>
-                <div id="footer-right">
-                    <a href="https://github.com/Scorpio750">
-                        <i class="fa fa-2x fa-github"></i>
-                    </a>
-                    <a href="http://twitter.com/syncretic__dream">
-                        <i class="fa fa-2x fa-twitter"></i>
-                    </a>
-                    <a href="http://n--o--c--e--u--r.tumblr.com">
-                        <i class="fa fa-2x fa-tumblr"></i>
-                    </a>
-                </div>
-            </footer>
-        </div>
-    </body>
+            <div id="footer-right">
+                <a href="https://github.com/Scorpio750">
+                    <i class="fa fa-2x fa-github"></i>
+                </a>
+                <a href="http://twitter.com/syncretic__dream">
+                    <i class="fa fa-2x fa-twitter"></i>
+                </a>
+                <a href="http://n--o--c--e--u--r.tumblr.com">
+                    <i class="fa fa-2x fa-tumblr"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
 
 </html>
