@@ -220,7 +220,7 @@ a {
 
 		h3 {
 			line-height: 2;
-			opacity: .7;
+			opacity: 0.7;
 		}
 
 		&:after,
@@ -241,7 +241,7 @@ a {
 			content: close-quote;
 			right: 5%;
 			bottom: 37%;
-			transform:rotate(180deg);
+			transform: rotate(180deg);
 		}
 	}
 
@@ -259,7 +259,7 @@ a {
 
 	#about-description {
 		position: relative;
-		padding: 3em;
+		padding: 3em 8em 3em 3em;
 		color: transparent;
 		font-weight: bold;
 		transition: color 0.25s 0.5s linear;
@@ -360,7 +360,7 @@ a {
 	}
 	/* FOOTER */
 	footer {
-		flex: 0 1 6vh;
+		flex: 0 1 7vh;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -388,13 +388,9 @@ a {
 	}
 
 	#footer-right {
-		flex: 0 1 8%;
-		display: flex;
-		padding-right: 1.5em;
-		justify-content: space-between;
-
-		i {
-			flex: 1 0 auto;
+		padding-right: .5em;
+		a {
+			margin: 0.3em;
 		}
 	}
 }

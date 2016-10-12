@@ -164,7 +164,7 @@ a {
     margin-bottom: 5em; }
     #home-panel h3 {
       line-height: 2;
-      opacity: .7; }
+      opacity: 0.7; }
     #home-panel:after, #home-panel:before {
       font-size: 10em;
       position: absolute;
@@ -192,7 +192,7 @@ a {
 
   #about-description {
     position: relative;
-    padding: 3em;
+    padding: 3em 8em 3em 3em;
     color: transparent;
     font-weight: bold;
     transition: color 0.25s 0.5s linear; }
@@ -258,7 +258,7 @@ a {
 
   /* FOOTER */
   footer {
-    flex: 0 1 6vh;
+    flex: 0 1 7vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -280,9 +280,6 @@ a {
     font-size: 14px; }
 
   #footer-right {
-    flex: 0 1 8%;
-    display: flex;
-    padding-right: 1.5em;
-    justify-content: space-between; }
-    #footer-right i {
-      flex: 1 0 auto; } }
+    padding-right: .5em; }
+    #footer-right a {
+      margin: 0.3em; } }
