@@ -63,8 +63,7 @@ a {
     font-size: 3.7vh; }
 
   p {
-    font-size: 3.5vh;
-    line-height: 2; }
+    font-size: 3.0vh; }
 
   /* BACKGROUND */
   #diag-line {
@@ -158,10 +157,14 @@ a {
       padding: 3em;
       display: flex;
       justify-content: center;
+      align-items: center;
       opacity: 0; }
 
   #home-panel {
     margin-bottom: 5em; }
+    #home-panel h3 {
+      line-height: 2;
+      opacity: .7; }
     #home-panel:after, #home-panel:before {
       font-size: 10em;
       position: absolute;
@@ -173,7 +176,9 @@ a {
       left: 0; }
     #home-panel:after {
       content: close-quote;
-      right: 10%; }
+      right: 5%;
+      bottom: 37%;
+      transform: rotate(180deg); }
 
   #about-circle {
     display: none; }
