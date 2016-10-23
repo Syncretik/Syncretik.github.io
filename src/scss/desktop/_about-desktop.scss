@@ -1,0 +1,73 @@
+#about-circle {
+	display: none;
+}
+
+#about-panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10%;
+	margin-bottom: 15%;
+}
+
+#about-description {
+	position: relative;
+	padding: 3em 8em 3em 3em;
+	color: transparent;
+	font-weight: bold;
+	transition: color 0.25s 0.5s linear;
+
+	&:after,
+	&:before {
+		transition: all 1.0s ease-in-out;
+	}
+
+	&:after {
+		content: "";
+		background: url("../../src/img/sideshot black and white.jpg");
+		background-color: #777;
+		background-size: cover;
+		// border-radius: 120px 0 120px 0;
+		border: 15.5vw inset #aaa;
+		border-radius: 450px;
+		background-repeat: no-repeat;
+		opacity: 0.3;
+		position: absolute;
+		top: -8%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -10;
+		animation: spinPulse 2.0s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+		/* easeOutQuint */
+	}
+
+	&:hover {
+		&:after,
+		&:before {
+			border: 2em inset #aaa;
+			border-radius: 0;
+			// padding-left: 26vw;
+			opacity: 0.4;
+			right: -5%;
+			// bottom: -10%;
+		}
+		color: $prim-white;
+	}
+}
+@keyframes spinPulse {
+	0% {
+		transform: rotate(-280deg);
+		opacity: 0;
+		box-shadow: 0 0 1px #bdd73c;
+	}
+
+	50% {
+		// transform: rotate(-145deg);
+		// opacity: 0.1;
+	}
+
+	100% {
+		transform: rotate(-360deg);
+	}
+}
