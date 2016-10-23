@@ -11,8 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	var homePanel = document.getElementById('home-panel'),
 	    aboutPanel = document.getElementById('about-panel'),
 	    worksPanel = document.getElementById('works-panel'),
-	    allSections = document.getElementsByClassName('info-panel'),
-	    activeSection = homePanel;
+	    allSections = document.getElementsByClassName('info-panel');
+
+	var activeSection = homePanel;
 
 	// all elements for initial page animation
 	var vertLine = document.getElementById('vert-line'),
@@ -128,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		toggleSection(worksPanel);
 	});
 
-	// for (var i = 0; i <= 2; i++) {
+	// for (const i = 0; i <= 2; i++) {
 	// 	navItems[i].addEventListener('mouseover', function() {
 	// 		TweenMax.to(this, 0.2, {
 	// 			borderLeft: '1.5em solid #2d2d2d'

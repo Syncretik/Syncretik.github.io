@@ -1,19 +1,20 @@
 // why do I do this to myself
 document.addEventListener('DOMContentLoaded', function() {
 
-	var home = document.getElementById('home-btn'),
+	const home = document.getElementById('home-btn'),
 		about = document.getElementById('about-btn'),
 		works = document.getElementById('works-btn'),
 		navItems = document.getElementsByClassName('nav-item');
 
-	var homePanel = document.getElementById('home-panel'),
+	const homePanel = document.getElementById('home-panel'),
 		aboutPanel = document.getElementById('about-panel'),
 		worksPanel = document.getElementById('works-panel'),
-		allSections = document.getElementsByClassName('info-panel'),
-		activeSection = homePanel;
+		allSections = document.getElementsByClassName('info-panel');
+
+	let activeSection = homePanel;
 
 	// all elements for initial page animation
-	var vertLine = document.getElementById('vert-line'),
+	const vertLine = document.getElementById('vert-line'),
 		diagLine = document.getElementById('diag-line'),
 		diagRectangle = document.getElementById('diag-box-rectangle'),
 		diagSquare = document.getElementById('diag-box-square'),
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// hide all sections
 	(function hideSections() {
-		for (var i = 0; i <= 2; i++) {
+		for (let i = 0; i <= 2; i++) {
 			if (i == 0) {
 				allSections[i].style.display = 'flex';
 				continue;
@@ -127,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		toggleSection(worksPanel);
 	});
 
-	// for (var i = 0; i <= 2; i++) {
+	// for (const i = 0; i <= 2; i++) {
 	// 	navItems[i].addEventListener('mouseover', function() {
 	// 		TweenMax.to(this, 0.2, {
 	// 			borderLeft: '1.5em solid #2d2d2d'
