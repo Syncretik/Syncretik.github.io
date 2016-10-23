@@ -2,21 +2,22 @@
 @import "footer";
 @import "desktop/about-desktop";
 @import "desktop/nav-desktop";
+@import "desktop/works-desktop";
 
 h1 {
-	font-size: 5.0vh;
+	font-size: 5.0vmin;
 }
 
 h2 {
-	font-size: 4.0vh;
+	font-size: 4.0vmin;
 }
 
 h3 {
-	font-size: 3.7vh;
+	font-size: 3.7vmin;
 }
 
 p {
-	font-size: 3.0vh;
+	font-size: 3.0vmin;
 }
 /* BACKGROUND */
 #diag-line {

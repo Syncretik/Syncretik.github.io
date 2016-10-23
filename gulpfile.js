@@ -8,7 +8,7 @@ var debug = require('gulp-debug');
 var uglify = require('gulp-uglify');
 
 gulp.task('sass', function() {
-	return gulp.src('./src/scss/*.scss')
+	return gulp.src('./src/scss/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(sourcemaps.write())
