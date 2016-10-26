@@ -1,10 +1,3 @@
-/* Imports */
-@font-face {
-	font-family: "Petita";
-	src: url("src/PetitaMedium.tff") format("truetype");
-	font-weight: normal;
-	font-style: normal;
-}
 /* Variables */
 $prim-white: #e6e6e6;
 /* General Formatting */
@@ -28,9 +21,8 @@ html {
 }
 
 body {
-	font-family: Petita,Roboto, Helvetica Condensed Neue, sans-serif;
+	font-family: Roboto, Helvetica Condensed Neue, sans-serif;
 	color: $prim-white;
-	// color: white;
 	background-color: black;
 	opacity: 0.8;
 	cursor: default;

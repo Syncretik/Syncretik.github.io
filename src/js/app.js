@@ -56,17 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 
 			function showBoxes() {
-				TweenMax.staggerTo([diagRectangle, diagSquare], 2, {
+				TweenMax.staggerTo([diagRectangle, diagSquare], 1, {
 					opacity: 0.15,
 					ease: Power2.easeInOut,
 					onUpdate: showNav
-				}, .5);
+				}, 1);
 			}
 
 			function showNav() {
-				TweenMax.staggerTo(navItems, 1, {
+				TweenMax.staggerTo(navItems, 1.0, {
+					// marginLeft: '+=15px',
 					opacity: 0.8,
-					marginLeft: '+=15px',
 					ease: Power2.easeInOut,
 					onComplete: showHome
 				}, .5);

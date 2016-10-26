@@ -20,15 +20,17 @@ p {
 	font-size: 3.0vmin;
 }
 /* BACKGROUND */
-#diag-line {
-	position: absolute;
-	height: 40vh;
-	width: 70vw;
-	// width: 0;
-	opacity: 0;
-	border-bottom: 1px solid $prim-white;
-	transform: translateX(33%) translateY(65%) rotate(30deg);
-	z-index: -998;
+@media all and (min-width: 1371px) {
+	#diag-line {
+		position: absolute;
+		height: 40vh;
+		width: 70vw;
+		// width: 0;
+		opacity: 0;
+		border-bottom: 1px solid $prim-white;
+		transform: translateX(33%) translateY(65%) rotate(30deg);
+		z-index: -998;
+	}
 }
 
 #diag-box-rectangle {
@@ -99,7 +101,6 @@ p {
 	width: 1px;
 	z-index: -100;
 }
-
 
 #right-panel {
 	justify-content: center;
