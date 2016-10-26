@@ -1,0 +1,32 @@
+nav {
+	margin: 20% 20% 30%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	// justify-content: space-around;
+}
+
+.nav-item {
+	// flex: 1 0 20%;
+	margin: 3vh 0;
+	opacity: 0;
+	// min-width: 50%;
+	padding-left: 10%;
+	text-align: left;
+	cursor: pointer;
+	transition: all 0.2s linear;
+
+	&:after,
+	&:before {
+		// transition: all 0.2s linear;
+	}
+
+	h1 {
+		margin: 0.25em 0;
+	}
+
+	&:hover {
+		border-left: 2.1vw solid #2d2d2d;
+		// opacity: 1;
+	}
+}

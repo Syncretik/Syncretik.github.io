@@ -1,14 +1,18 @@
 var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var babel = require('gulp-babel');
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var debug = require('gulp-debug');
 var uglify = require('gulp-uglify');
 
 gulp.task('sass', function() {
-	return sass('src/scss/style.scss')
-		.pipe(gulp.dest('dist/css/'))
+	return gulp.src('./src/scss/**/*.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('./dist/css/'))
 		.pipe(reload({
 			stream: true
 		}));
@@ -37,7 +41,7 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 		minify: false
 	});
 
-	gulp.watch('src/scss/*.scss', ['sass']);
+	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/*.js', ['scripts']);
 	gulp.watch(['*.html', 'dist/js/*.js'], {
 		cwd: './'
