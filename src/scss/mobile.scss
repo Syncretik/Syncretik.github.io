@@ -1,3 +1,14 @@
 @import "base";
 @import "footer";
 @import "mobile/nav-mobile";
+
+#left-panel {
+
+	&:after {
+		content: "";
+		background: url("../../src/img/sideshot black and white.jpg");
+		background-size: 3px;
+		opacity: .25;
+		width: 100%;
+	}
+}
