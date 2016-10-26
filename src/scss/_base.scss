@@ -127,7 +127,7 @@ input:checked + #about-panel p {
 
 	.info-panel {
 		width: 100%;
-		padding: 3em;
+		padding: 1em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -138,29 +138,63 @@ input:checked + #about-panel p {
 #home-panel {
 	margin-bottom: 5em;
 
-	h3 {
+	p {
 		line-height: 2;
-		opacity: 0.7;
+		opacity: 0.75;
 	}
 
-	&:after,
-	&:before {
-		font-size: 10em;
-		position: absolute;
-		font-family: cursive;
-		opacity: 0.1;
-	}
+	// &:after,
+	// &:before {
+	// 	font-size: 10em;
+	// 	position: absolute;
+	// 	font-family: cursive;
+	// 	opacity: 0.1;
+	// }
+	//
+	// &:before {
+	// 	content: open-quote;
+	// 	top: 20%;
+	// 	left: 0;
+	// }
+	//
+	// &:after {
+	// 	content: close-quote;
+	// 	right: 5%;
+	// 	bottom: 37%;
+	// 	transform: rotate(180deg);
+	// }
+}
 
-	&:before {
-		content: open-quote;
-		top: 20%;
-		left: 0;
-	}
+#works-panel {
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
 
-	&:after {
-		content: close-quote;
-		right: 5%;
-		bottom: 37%;
-		transform: rotate(180deg);
+.works-panel__row {
+	flex: 1 0 100%;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.works-panel__item {
+	text-align: center;
+	flex: 1 0 33%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// border-radius: 4vmax;
+	.works-panel__item__link {
+		opacity: 0.5;
+		padding: 0.9em;
+		transition: 0.25s all ease-in-out;
+
+		&:hover {
+			opacity: 1;
+			padding: 3vmax;
+			transform: scale(1.05);
+			border: 1px solid silver;
+			// margin-left: 1em;
+		}
 	}
 }
