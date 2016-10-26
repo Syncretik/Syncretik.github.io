@@ -1,8 +1,21 @@
+.works-panel__row {
+	display: flex;
+	flex-flow: row nowrap;
+}
 .works-panel__item {
 	height: 10vmax;
 	width: 10vmax;
 	flex: 1 0 33%;
-	.works-panel__link {
+	.works-panel__item__link {
+		opacity: 0.5;
+		transition: 0.25s all ease-in-out;
 		padding: 0.9em;
+
+		&:hover {
+			opacity: 1;
+			padding: 3vmax;
+			transform: scale(1.05);
+			border: 1px solid silver;
+		}
 	}
 }
