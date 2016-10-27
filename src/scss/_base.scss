@@ -135,7 +135,6 @@ input:checked + #about-panel p {
 }
 
 #home-panel {
-	margin-bottom: 5em;
 
 	h3 {
 		line-height: 2;
@@ -174,7 +173,7 @@ input:checked + #about-panel p {
 }
 
 .works-panel__item {
-	text-align: center;
+	// text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
