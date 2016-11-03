@@ -16,7 +16,8 @@
 }
 
 #right-panel {
-	transition: 10s width ease-in-out;
+	transition: 1s width ease-in-out;
+	flex: 3 0 50%;
 }
 
 #home-panel > h3 {

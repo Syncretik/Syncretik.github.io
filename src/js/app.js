@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (activeSection === section) return;
         TweenMax.to(activeSection, .5, {
             opacity: 0,
-            width: 0,
             display: 'none',
             onComplete: showSection
         });
@@ -101,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function showSection() {
             TweenMax.to(section, 1.0, {
                 opacity: 1,
-                width: '50%',
                 transform: 'rotate(360deg)',
                 display: 'flex',
                 onStart: rotateCircle
