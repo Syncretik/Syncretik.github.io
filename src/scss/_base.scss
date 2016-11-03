@@ -135,7 +135,11 @@ input:checked + #about-panel p {
 }
 
 #home-panel {
-	margin-bottom: 3em;
+	margin-bottom: 5em;
+
+	h3 {
+		line-height: 2;
+	}
 }
 
 #works-panel {
@@ -148,9 +152,14 @@ input:checked + #about-panel p {
 	flex: 1 0 100%;
 }
 
-.works-panel__item__link:hover {
-	opacity: 1;
-	padding: 1em;
-	transform: scale(1.05);
-	border: 1px solid silver;
+.works-panel__item__link {
+	transition: 0.25s all ease-in-out;
+	padding: 0.9em;
+
+	&:hover {
+		opacity: 1;
+		padding: 1em;
+		transform: scale(1.05);
+		border: 1px solid silver;
+	}
 }

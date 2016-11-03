@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             function showHome() {
                 TweenMax.to(homePanel, 2, {
                     opacity: 1,
-                    marginBottom: '5em',
+                    marginBottom: '7em',
                     ease: Power2.easeInOut,
                     onStart: showFooter
                 });
