@@ -135,31 +135,7 @@ input:checked + #about-panel p {
 }
 
 #home-panel {
-
-	h3 {
-		line-height: 2;
-		opacity: 0.75;
-	}
-	// &:after,
-	// &:before {
-	// 	font-size: 10em;
-	// 	position: absolute;
-	// 	font-family: cursive;
-	// 	opacity: 0.1;
-	// }
-	//
-	// &:before {
-	// 	content: open-quote;
-	// 	top: 20%;
-	// 	left: 0;
-	// }
-	//
-	// &:after {
-	// 	content: close-quote;
-	// 	right: 5%;
-	// 	bottom: 37%;
-	// 	transform: rotate(180deg);
-	// }
+	margin-bottom: 3em;
 }
 
 #works-panel {
@@ -170,4 +146,11 @@ input:checked + #about-panel p {
 
 .works-panel__row {
 	flex: 1 0 100%;
+}
+
+.works-panel__item__link:hover {
+	opacity: 1;
+	padding: 1em;
+	transform: scale(1.05);
+	border: 1px solid silver;
 }

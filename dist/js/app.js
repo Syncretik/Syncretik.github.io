@@ -70,13 +70,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 opacity: 0.8,
                 ease: Power2.easeInOut,
                 onComplete: showHome
-            }, .5);
+            }, .4);
         }
 
         function showHome() {
             TweenMax.to(homePanel, 2, {
                 opacity: 1,
-                marginBottom: '1em',
+                marginBottom: '5em',
                 ease: Power2.easeInOut,
                 onStart: showFooter
             });

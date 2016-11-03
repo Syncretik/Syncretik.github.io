@@ -2,6 +2,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 }
+
 .works-panel__item {
 	height: 10vmax;
 	width: 10vmax;
@@ -9,16 +10,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	.works-panel__item__link {
-		opacity: 0.5;
-		transition: 0.25s all ease-in-out;
-		padding: 0.9em;
+}
 
-		&:hover {
-			opacity: 1;
-			padding: 3vmax;
-			transform: scale(1.05);
-			border: 1px solid silver;
-		}
-	}
+.works-panel__item__link {
+	opacity: 0.5;
+	transition: 0.25s all ease-in-out;
+	padding: 0.9em;
 }
