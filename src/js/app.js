@@ -69,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     opacity: 0.8,
                     ease: Power2.easeInOut,
                     onComplete: showHome
-                }, .4);
+                }, .5);
             }
 
             function showHome() {
                 TweenMax.to(homePanel, 2, {
                     opacity: 1,
-                    marginBottom: '7em',
+                    marginBottom: '+=7vh',
                     ease: Power2.easeInOut,
                     onStart: showFooter
                 });
@@ -90,9 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
         })();
 
     function toggleSection(section) {
-        if (activeSection == section) return;
+        if (activeSection === section) return;
         TweenMax.to(activeSection, .5, {
             opacity: 0,
+            width: 0,
             display: 'none',
             onComplete: showSection
         });
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function showSection() {
             TweenMax.to(section, 1.0, {
                 opacity: 1,
+                width: '50%',
                 transform: 'rotate(360deg)',
                 display: 'flex',
                 onStart: rotateCircle
@@ -110,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function rotateCircle() {
             if (section.id == 'about-panel') {
                 TweenMax.from(activeSection, 1.5, {
-                    // transform: 'scale(.5)',
                     ease: Power4.easeOut
                 });
             }
@@ -127,18 +128,4 @@ document.addEventListener('DOMContentLoaded', function() {
     works.addEventListener('click', function() {
         toggleSection(worksPanel);
     });
-
-    // for (const i = 0; i <= 2; i++) {
-    // 	navItems[i].addEventListener('mouseover', function() {
-    // 		TweenMax.to(this, 0.2, {
-    // 			borderLeft: '1.5em solid #2d2d2d'
-    // 		});
-    // 	});
-    //
-    // 	navItems[i].addEventListener('mouseout', function() {
-    // 		TweenMax.to(this, 1, {
-    // 			borderLeft: ''
-    // 		});
-    // 	});
-    // }
 });

@@ -46,7 +46,6 @@ input:checked + #about-panel p {
 		opacity: 0.35;
 	}
 	color: $prim-white;
-	// border: 16px inset #aaa;
 }
 
 #diag-box-rectangle {
@@ -99,10 +98,6 @@ input:checked + #about-panel p {
 	// height: 100%;
 }
 
-.two-col {
-	flex: 1 0 49%;
-}
-
 .flex-container {
 	display: flex;
 	flex-flow: row wrap;
@@ -134,12 +129,8 @@ input:checked + #about-panel p {
 	}
 }
 
-#home-panel {
-	margin-bottom: 5em;
-
-	h3 {
-		line-height: 2;
-	}
+#home-panel > h3 {
+	line-height: 2;
 }
 
 #works-panel {
