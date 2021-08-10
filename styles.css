@@ -1,0 +1,56 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  padding: 3vh;
+  box-sizing: border-box;
+  cursor: default;
+  outline: 1px white dotted;
+  animation: outline 1s infinite alternate cubic-bezier(0.5, 0.0, 0.7, 2.3);
+}
+
+@keyframes outline {
+  from { outline: 1px white dotted }
+  to { outline: 2px grey solid }
+}
+
+a {
+  color: black;
+  background-color: gainsboro;
+  padding: 2px;
+}
+
+a:hover {
+  color: yellow;
+  background-color: black;
+}
+
+span {
+  color: black;
+}
+
+footer {
+  padding-top: 10vh;
+  /* text-align: right; */
+}
+
+#X {
+  position: absolute;
+  right: 50%;
+  top: 30%;
+  font-size: 10px;
+  font-weight: 100;
+  font-family: Monaco;
+  /* animation: spinspin 1s infinite alternate cubic-bezier(0.5, 0.0, 0.7, 2.3); */
+  animation: spinspin 1s infinite alternate linear;
+}
+
+@keyframes spinspin {
+  from {
+    color: grey;
+  }
+  to {
+    color: black;
+    transform: rotate(1440deg) skew(1440000deg)
+  }
+}
