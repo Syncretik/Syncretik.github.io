@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Pitch Bold",
+  src: local("test-pitch-bold.woff2")
+}
+
+body {
+  background-color: gainsboro;
+  color: crimson;
+  font-family: "Pitch Bold";
+  font-size: 24px;
+  padding: 3vh;
+  box-sizing: border-box;
+  cursor: default;
+  outline: 1px white dotted;
+  animation: outline 1s infinite alternate cubic-bezier(0.5, 0.0, 0.7, 2.3);
+}
+
+@keyframes outline {
+  from { outline: 1px white dotted }
+  to { outline: 2px grey solid }
+}
