@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Pitch Bold",
-  src: local("test-pitch-bold.woff2")
+  src: local("test-pitch-bold.woff2") format("woff2")<
 }
 
 body {
-  background-color: gainsboro;
+  background-color: lightblue;
   color: crimson;
-  font-family: "Pitch Bold";
+  font-family: "Pitch Bold", monospace;
   font-size: 24px;
   padding: 3vh;
   box-sizing: border-box;
@@ -17,5 +17,5 @@ body {
 
 @keyframes outline {
   from { outline: 1px white dotted }
-  to { outline: 2px grey solid }
+  to { outline: 2px salmon solid }
 }

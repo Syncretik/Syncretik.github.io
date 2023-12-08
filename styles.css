@@ -1,14 +1,13 @@
 @font-face {
   font-family: "Signifier Regular",
-  src: local("test-signifier-regular.woff2") format("woff2"),
+  src: local("./test-signifier-regular.woff2") format("woff2"),
 }
 
 @font-face {
   font-family: "Signifier Black Italic",
   font-style: "italic",
   font-weight: "900",
-  src: local("test-signifier-black-italic.woff2") format("woff2"),
-
+  src: local("./test-signifier-black-italic.woff2") format("woff2"),
 }
 
 body {
@@ -30,8 +29,9 @@ body {
 
 #wu {
   position: absolute;
-  bottom: 0;
-  right: vw;
+  bottom: 10vh;
+  z-index: -999;
+  right: 0;
   display: flex;
   justify-content: flex-end;
   font-size: 72;
@@ -50,10 +50,6 @@ body {
 
 .hua {
   font-family: serif;
-}
-
-h2 {
-  background-color: yellow;
 }
 
 a {
