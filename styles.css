@@ -32,6 +32,22 @@ hr {
   opacity: 0.16;
 }
 
+a, button {
+  color: black;
+  background-color: gainsboro;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 2px;
+  font-size: 1em;
+  font-family: "Signifier Regular";
+}
+
+a:hover, button:hover {
+  color: yellow;
+  background-color: black;
+}
+
+
 #wu {
   position: absolute;
   bottom: 10vh;
@@ -74,17 +90,6 @@ hr {
 
 .hua {
   font-family: serif;
-}
-
-a {
-  color: black;
-  background-color: gainsboro;
-  padding: 2px;
-}
-
-a:hover {
-  color: yellow;
-  background-color: black;
 }
 
 footer {

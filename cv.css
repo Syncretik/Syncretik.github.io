@@ -23,5 +23,8 @@ body {
 button {
     color: blue;
     cursor: pointer;
+    text-decoration: underline;
     background-color: lightblue;
+    font-size: 1em;
+    padding: 2px 1rem;
 }
