@@ -22,6 +22,7 @@ body {
 
 button {
     color: blue;
+    border-color: crimson;
     cursor: pointer;
     text-decoration: underline;
     background-color: lightblue;
