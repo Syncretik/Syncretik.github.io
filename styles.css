@@ -39,6 +39,7 @@ a, button {
   cursor: pointer;
   padding: 2px;
   font-size: 1em;
+  border: none;
   font-family: "Signifier Regular";
 }
 
