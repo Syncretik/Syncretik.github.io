@@ -27,25 +27,48 @@ body {
   to { outline: 2px grey solid }
 }
 
+hr {
+  padding-top: 50vh;
+  opacity: 0.16;
+}
+
 #wu {
   position: absolute;
   bottom: 10vh;
   z-index: -999;
   display: flex;
   justify-content: flex-end;
-  font-size: 72;
+  font-size: 55px;
   font-family: "Signifier Black Italic";
   font-style: italic;
   color: white;
-  opacity: 0.1;
   right: 0;
-  animation: runes 7s infinite alternate cubic-bezier(0.5, 0.0, 0.7, 2.3);
-  r
+}
+
+#runes {
+  animation: runes 4.444s infinite alternate cubic-bezier(0.5, 0.0, 0.7, 2.3);
+}
+
+#yingguang {
+  max-width: 50vmax;
+  animation: yingguang 4.444s infinite alternate cubic-bezier(0.1, 0.7, 0.7, 0.4);;
+}
+
+@media (max-width: 768px) {
+  #wu {
+    font-size: 44px;
+    display: block;
+  }
 }
 
 @keyframes runes {
   from { opacity: 0 }
-  to { opacity: 0.15 }
+  to { opacity: 0.24 }
+}
+
+@keyframes yingguang {
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
 
 .hua {
@@ -73,8 +96,6 @@ footer {
   top: 30%;
   font-size: 10px;
   font-weight: 100;
-  font-family: Monaco;
-  /* animation: spinspin 1s infinite alternate cubic-bezier(0.5, 0.0, 0.7, 2.3); */
   animation: spinspin 1s infinite alternate linear;
 }
 
@@ -86,8 +107,4 @@ footer {
     color: black;
     transform: rotate(1440deg) skew(1440000deg)
   }
-}
-
-#yingguang1 {
-  width: 100vmin;
 }

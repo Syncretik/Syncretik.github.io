@@ -14,15 +14,18 @@
       <br>
       I build spaces, you fill in the rest.
       <br>
-      <h3 class="hua">《卍》～ 《卐》 ∞ ≈|≠「∅」¿？$</h3>
+      <h3 class="hua"></h3>
       <h3 class="hua">✿ ~「美籍華人」</h3>
+      <hr>
       <div id="wu">
-        <span>
-           <br>⦵⦒☿ ⇲⥹ ⚗︎❩⇭⥔∾˛
-           <br> ....⎞⎞⎛⎛ 卍〖Syncretik〗卐
-           <br>௹⫷☯⨠﹆ ⧝⦖☸︎
+        <span id="runes">
+           ௹⫷☯⨠﹆ ⧝⦖☸︎
+           <br>
+           . ⎞⎞⎛⎛ ⦵⦒☿ ⇲⥹ ⚗︎❩⇭⥔∾˛
+           <br>
+           《卍》～《卐》 ∞ ≈|≠「∅」¿？$
         </span>
-        <img id="yingguang1" src="./yingguang1.png">
+        <img id="yingguang" src="./yingguang1.png">
       </div>
       <footer>
         <p>Resources /</p>
@@ -38,4 +41,15 @@
       </footer>
     </body>
     <span id="X">{Ø}</span>
+
+    <script>
+      const yingguang = document.getElementById("yingguang");
+      const imageSrc = new URL(yingguang.src);
+      setInterval(() => {
+        imageSrc.pathname = /yingguang1/.test(yingguang.src)
+          ? '/yingguang2.png'
+          : '/yingguang1.png';
+        yingguang.src = imageSrc;
+      }, 8888);
+    </script>
 <html>
