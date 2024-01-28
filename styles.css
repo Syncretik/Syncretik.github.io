@@ -56,7 +56,8 @@ hr {
 
 @media (max-width: 768px) {
   #wu {
-    font-size: 44px;
+    font-size: 32px;
+    left: 10vw;
     display: block;
   }
 }
