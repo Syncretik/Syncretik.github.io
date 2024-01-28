@@ -10,8 +10,17 @@
   src: local("./test-signifier-black-italic.woff2") format("woff2"),
 }
 
+main {
+  padding: 1.44em;
+  position: relative;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 body {
   background-color: black;
+  padding: 0 !important;
   color: white;
   font-family: "Signifier Regular";
   font-size: 24px;
@@ -29,7 +38,7 @@ body {
 
 hr {
   padding-top: 50vh;
-  opacity: 0.16;
+  opacity: 0.19;
 }
 
 a, button {
@@ -51,7 +60,8 @@ a:hover, button:hover {
 
 #wu {
   position: absolute;
-  bottom: 10vh;
+  bottom: 13vh;
+  left: 10vw;
   z-index: -999;
   display: flex;
   justify-content: flex-end;
@@ -63,19 +73,24 @@ a:hover, button:hover {
 }
 
 #runes {
-  animation: runes 4.444s infinite alternate cubic-bezier(0.5, 0.0, 0.7, 2.3);
+  animation: runes 4.444s infinite alternate cubic-bezier(0.6, 0.0, 0.7, 2.3);
 }
 
 #yingguang {
-  max-width: 50vmax;
+  max-width: 49vmax;
+  overflow: hidden;
   animation: yingguang 4.444s infinite alternate cubic-bezier(0.1, 0.7, 0.7, 0.4);;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
   #wu {
     font-size: 32px;
-    left: 10vw;
     display: block;
+    right: 19vw;
+  }
+
+  #yingguang {
+    max-width: 44vmax;
   }
 }
 
