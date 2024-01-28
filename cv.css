@@ -19,3 +19,9 @@ body {
   from { outline: 1px white dotted }
   to { outline: 2px salmon solid }
 }
+
+button {
+    color: blue;
+    cursor: pointer;
+    background-color: lightblue;
+}
