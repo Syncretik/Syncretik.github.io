@@ -37,7 +37,8 @@ body {
 }
 
 hr {
-  padding-top: 50vh;
+  border-radius: 44%;
+  padding-top: 49vh;
   opacity: 0.19;
 }
 
